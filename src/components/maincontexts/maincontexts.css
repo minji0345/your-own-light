@@ -29,6 +29,7 @@
 
 .city-list {
 	width: 55vw;
+	height: 60vh;
 	background-color: #f8f8f9;
 	padding: 1vw;
 	display: flex;

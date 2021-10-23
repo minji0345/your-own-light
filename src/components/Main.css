@@ -5,6 +5,7 @@
 	flex-direction: column;
 	background-color: #ededef;
 	align-items: center;
+	justify-content: center;
 }
 
 .header {
@@ -12,8 +13,7 @@
 	width: 80vw;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
-	width: 100vw;
+	justify-content: flex-end;
 }
 
 .header-button{

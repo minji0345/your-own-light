@@ -26,7 +26,8 @@ function Order() {
     
     function CityBlockTop() {
         return(
-            <div class="city-list">
+            <div class="city-list" style={{overflowY:'scroll'}}>
+                <City/>
                 <City/>
                 <City/>
             </div>
