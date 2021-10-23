@@ -23,3 +23,11 @@
 	text-align: center;
 	padding: 2px;
 }
+
+.main-context{
+	width: 80vw;
+	height: 100vh;
+	border-top: solid 1px black;
+	background-color: white;
+	padding-top: 5vh;
+}
