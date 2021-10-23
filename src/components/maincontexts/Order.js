@@ -50,13 +50,13 @@ function Order() {
     }
 
     return (
-            <div className="main-order">
-                <div className="city-display">
-                    <div className="status-bar">1.top 2.middle 3.base</div>
-                    <CityBlockTop/>
-                </div>
-                <div className="order-state"></div>
+        <div className="main-order">
+            <div className="city-display">
+                <div className="status-bar">1.top 2.middle 3.base</div>
+                <CityBlockTop/>
             </div>
+            <div className="order-state"></div>
+        </div>
     );
 };
 
