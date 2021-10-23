@@ -1,0 +1,36 @@
+.main-order{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80vw;
+}
+
+.city-display{
+    width:60vw
+}
+
+.order-state{
+    width: 15vw;
+    height: 70vh;
+    margin: 0;
+    background-color: white;
+    border-left: black solid 1px;
+}
+
+.city-list{
+    width: 55vw;
+    background-color: #F8F8F9;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-block{
+    background-color: white;
+    margin: 2vh 0 2vh 0;
+    width: 50vw;
+    height: 200px;
+    padding : 2vh;
+}

@@ -17,17 +17,20 @@
 }
 
 .header-button{
-	width:10vw;
-	background: white;
+	width:5vw;
 	align-items: center;
 	text-align: center;
-	padding: 2px;
+	padding: 5px;
+}
+
+.header-button:hover{
+	cursor: pointer;
+	background-color: white;
 }
 
 .main-context{
 	width: 80vw;
 	height: 100vh;
 	border-top: solid 1px black;
-	background-color: white;
-	padding-top: 5vh;
+	/* background-color: white; */
 }

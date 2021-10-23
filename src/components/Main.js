@@ -6,16 +6,20 @@ import Order from './maincontexts/Order';
 
 
 function Main() {
-    const [contentType, setContentType] = useState(0)
+    const [contentType, setContentType] = useState(1)
 
     function displayHandler() {
         if (contentType === 1){
-            return( 
+            return(
                 <Home />
             );
         } else if (contentType === 2){
             return(
                 <Order/>
+            )
+        } else if (contentType === 3){
+            return(
+                <About/>
             )
         }
     }
@@ -23,9 +27,9 @@ function Main() {
     return (
         <div className="main">
             <div className="header">
-                <div className="header-button" onClick={() => setContentType(1)}>Home</div>
-                <div className="header-button" onClick={() => setContentType(2)}>Order</div>
-                <div className="header-button" onClick={() => setContentType(3)}>About</div>
+                <div className="header-button" onClick={() => setContentType(1)} style={{color: contentType === 1 ? "#6A26ED" : '#000000' }}>Home</div>
+                <div className="header-button" onClick={() => setContentType(2)} style={{color: contentType === 2 ? "#6A26ED" : '#000000' }}>Order</div>
+                <div className="header-button" onClick={() => setContentType(3)} style={{color: contentType === 3 ? "#6A26ED" : '#000000' }}>About</div>
             </div>
             <div className="main-context">
                 {displayHandler()}
