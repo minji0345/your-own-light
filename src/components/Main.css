@@ -8,5 +8,18 @@
 }
 
 .header {
+	margin: 5vh;
+	width: 80vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 	width: 100vw;
+}
+
+.header-button{
+	width:10vw;
+	background: white;
+	align-items: center;
+	text-align: center;
+	padding: 2px;
 }

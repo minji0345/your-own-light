@@ -1,23 +1,20 @@
 import React from 'react';
 import './Main.css';
+import About from './maincontexts/About';
 
 
-const Main = () => {
+function Main() {
 
 
     return (
         <div className="main">
             <div className="header">
-                header position
+                <div className="header-button">Home</div>
+                <div className="header-button">Order</div>
+                <div className="header-button">About</div>
             </div>
             <div className="main-context">
-                main position
-                    <div className="main-order">
-                        order
-                    </div>
-                    <div className="main-about">
-                        about
-                    </div>
+                main context Postion
             </div>
         </div>
     );
