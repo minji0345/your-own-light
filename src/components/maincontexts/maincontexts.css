@@ -1,36 +1,75 @@
-.main-order{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80vw;
+.main-order {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 80vw;
 }
 
-.city-display{
-    width:60vw
+.city-display {
+	width: 65vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.order-state{
-    width: 15vw;
-    height: 70vh;
-    margin: 0;
-    background-color: white;
-    border-left: black solid 1px;
+.status-bar {
+	width: 65vw;
+	height: 4vw;
+	padding: 2vw 0 0 0;
 }
 
-.city-list{
-    width: 55vw;
-    background-color: #F8F8F9;
-    padding: 1vw;
+.order-state {
+	width: 15vw;
+	height: 70vh;
+	margin: 0;
+	background-color: white;
+	border-left: black solid 1px;
+}
+
+.city-list {
+	width: 55vw;
+	background-color: #f8f8f9;
+	padding: 1vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.city-block {
+	background-color: white;
+	margin: 2vh 0 2vh 0;
+	width: 50vw;
+	height: 200px;
+	padding: 2vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+
+.city-name{
+    height: 30px;
+}
+
+.city-info{
+    height: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
     align-items: center;
 }
 
-.city-block{
-    background-color: white;
-    margin: 2vh 0 2vh 0;
-    width: 50vw;
-    height: 200px;
-    padding : 2vh;
+.city-color{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 5vw;
 }
+
+.city-description{
+    padding: 2vw;
+    width:20vw;
+    height: 100px;
+    border-left:black solid 1px;
+}
+

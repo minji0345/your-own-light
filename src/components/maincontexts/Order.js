@@ -6,7 +6,7 @@ const cities = [];
 function City() {
     return(
         <div className="city-block">
-            <div className="cityName">
+            <div className="city-name">
                 Seoul
             </div>
             <div className="city-info">
@@ -14,7 +14,7 @@ function City() {
 
                 </div>
                 <div className="city-description">
-
+                    someplaintext here
                 </div>
             </div>
         </div>
@@ -52,6 +52,7 @@ function Order() {
     return (
             <div className="main-order">
                 <div className="city-display">
+                    <div className="status-bar">1.top 2.middle 3.base</div>
                     <CityBlockTop/>
                 </div>
                 <div className="order-state"></div>
