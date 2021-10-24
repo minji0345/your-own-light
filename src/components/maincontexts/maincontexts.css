@@ -34,15 +34,34 @@
 	margin: 0 1vw 0 1vw;
 }
 
-.step-button{
+.prev-button {
+	height: 2vw;
+	width: 6vw;
+	margin: 0 2vw 2vw 0;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
 }
+
+.prev-button:hover{
+	background-color: white;
+	cursor: pointer;
+}
+
+.prev-button1 {
+	height: 2vw;
+	margin: 0 2vw 2vw 0;
+	width: 6vw;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
 
 .next-button {
 	height: 2vw;
-	/* width:6vw; */
 	margin: 0 2vw 2vw 0;
 	display: flex;
 	text-align: center;
@@ -125,5 +144,24 @@
 }
 
 .city-choose{
-	background-color: blueviolet;
+	position: relative;
+	display: flex;
+	flex-direction:row;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+}
+
+.choose-btn{
+	width:5vw;
+	align-items: center;
+	text-align: center;
+	padding: 5px;
+	background-color: #ededef;
+}
+
+.choose-btn:hover{
+	background-color:#6a26ed;
+	color: white;
+	cursor: pointer;
 }

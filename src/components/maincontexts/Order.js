@@ -1,13 +1,37 @@
 import React, { useState } from 'react';
 import './maincontexts.css';
-import City from './City';
 
+
+
+
+function City({name,info,color, cityHandler}) {
+    
+    return(
+        <div className="city-block">
+            <div className="city-name">
+                {name}
+            </div>
+            <div className="city-info">
+                <div className="city-color" style={{backgroundColor: color }}>
+
+                </div>
+                <div className="city-description">
+                    {info}
+                </div>
+            </div>
+            <div className="city-choose">
+                <div ></div>
+                <div className="choose-btn" onClick={() => cityHandler(name)}>choose</div>
+            </div>
+        </div>
+    )
+};
 
 
 function ChosenCity({name}) {
 
     return(
-        <div className="order order-top"> {name} </div>
+        <div className="order order-top">{name}</div>
     )
 };
 
@@ -15,6 +39,11 @@ function ChosenCity({name}) {
 
 function Order() {
 
+
+    /*------------city display 관리 함수  -------- */
+
+
+    /*------------status-bar 관리 함수  -------- */
 
     const [moduleType, setModuleType] = useState(1)
 
@@ -45,14 +74,35 @@ function Order() {
         }
     }
 
+     /*------------order-state 관리 함수  -------- */
+    const [topModule,setTopModule] = useState('top');
+    const [middleModule,setMiddleModule] = useState('middle');
+    const [baseModule,setBaseModule] = useState('base');
+
+
+
+    const onTopModule = (name) =>{
+        setTopModule(name);
+    }
+
+    const onMiddleModule = (name) =>{
+        setMiddleModule(name);
+    }
+
+    const onBaseModule = (name) =>{
+        setBaseModule(name);
+    }
+
     
+    /*------------city list 관리 함수  -------- */
     
     function CityBlockTop() {
         return(
-            <div class="city-list" style={{overflowY:'scroll'}}>
-                <City name={"seoul"} info={"hihi"} color={"blue"} />
-                <City name={"london"} info={"text"} color={"red"} />
-                <City />
+            <div class="city-list" style={{overflowY:'auto',}}>
+                <City name={"seoul"} info={"hihi"} color={"blue"} cityHandler={(cityname)=> onTopModule(cityname)}/>
+                <City name={"london"} info={"text"} color={"red"} cityHandler={(cityname)=> onTopModule(cityname)}/>
+                <City name={"singapore"} info={"text"} color={"orange"} cityHandler={(cityname)=> onTopModule(cityname)}/>
+                <City name={"hawaii"} info={"text"} color={"pink"} cityHandler={(cityname)=> onTopModule(cityname)}/>
             </div>
         )
     }
@@ -60,7 +110,9 @@ function Order() {
     function CityBlockMiddle() {
         return(
             <div class="city-list" style={{overflowY:'scroll'}}>
-                middle
+                <City name={"Bali"} info={"hihi"} color={"deeppink"} cityHandler={(cityname)=> onMiddleModule(cityname)}/>
+                <City name={"Naypiyidaw"} info={"text"} color={"lime"} cityHandler={(cityname)=> onMiddleModule(cityname)}/>
+                <City name={"El Calafate"} info={"text"} color={"coral"} cityHandler={(cityname)=> onMiddleModule(cityname)}/>
             </div>
         )
     }
@@ -68,7 +120,10 @@ function Order() {
     function CityBlockBase() {
         return(
             <div class="city-list" style={{overflowY:'scroll'}}>
-                base
+                <City name={"paris"} info={"hihi"} color={"gray"} cityHandler={(cityname)=> onBaseModule (cityname)}/>
+                <City name={"Reykjavik"} info={"text"} color={"gray"} cityHandler={(cityname)=> onBaseModule (cityname)}/>
+                <City name={"Santiago"} info={"text"} color={"gray"} cityHandler={(cityname)=> onBaseModule (cityname)}/>
+                <City name={"Zagreb"} info={"text"} color={"gray"} cityHandler={(cityname)=> onBaseModule (cityname)}/>
             </div>
         )
     }
@@ -76,28 +131,26 @@ function Order() {
     return (
         <div className="main-order">
             <div className="city-display">
-                <div className="status-bar">
+            <div className="status-bar">
+                    { moduleType !== 1 ? 
+                    <div className="prev-button" onClick={previousHandler}>
+                        previous step
+                    </div> : <div className="prev-button1"></div> }
                     <div className="status-list">
                         <div className="status" style={{color: moduleType === 1 ? "#6A26ED" : '#000000' }}> 1.top</div>
                         <div className="status" style={{color: moduleType === 2 ? "#6A26ED" : '#000000' }}>2.middle</div>
                         <div className="status" style={{color: moduleType === 3 ? "#6A26ED" : '#000000' }}> 3.base</div>
                     </div>
-                    <div className="step-button"> 
-                        <div className="next-button" onClick={previousHandler}>
-                            previous step
-                        </div>
-                        <div className="next-button" onClick={nextHandler}>
-                            next step
-                        </div>
+                    <div className="next-button" onClick={nextHandler}>
+                        next step
                     </div>
-                    
                 </div>
                 <div>{moduleHandler()}</div>
             </div>
             <div className="order-state">
-                <ChosenCity name={"top"}/>
-                <ChosenCity name={"middle"}/>
-                <ChosenCity name={"base"}/>
+                <ChosenCity name={topModule}/>
+                <ChosenCity name={middleModule}/>
+                <ChosenCity name={baseModule}/>
             </div>
         </div>
     );
