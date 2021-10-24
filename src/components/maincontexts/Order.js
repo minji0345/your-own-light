@@ -1,37 +1,29 @@
 import React, { useState } from 'react';
 import './maincontexts.css';
+import City from './City';
 
-const cities = [];
 
-function City() {
+
+function ChosenCity({name}) {
+
     return(
-        <div className="city-block">
-            <div className="city-name">
-                Seoul
-            </div>
-            <div className="city-info">
-                <div className="city-color" style={{backgroundColor:'blue'}}>
-
-                </div>
-                <div className="city-description">
-                    someplaintext here
-                </div>
-            </div>
-        </div>
+        <div className="order order-top"> {name} </div>
     )
 };
 
+
+
 function Order() {
 
-    const moduleNum = 1;
 
-    const [moduleType, setModuleType] = useState(moduleNum)
+    const [moduleType, setModuleType] = useState(1)
 
-    const nextHandler = (moduleNum) => {
-        moduleNum += 1;
-        return(
-            setModuleType(moduleNum)
-        )
+    const previousHandler = () => {
+        setModuleType(moduleNum => moduleNum-1)
+    }
+
+    const nextHandler = () => {
+        setModuleType(moduleNum => moduleNum+1)
     }
 
     function moduleHandler() {
@@ -48,6 +40,8 @@ function Order() {
             return(
                 <CityBlockBase/>
             )
+        } else {
+            setModuleType(1)
         }
     }
 
@@ -56,9 +50,9 @@ function Order() {
     function CityBlockTop() {
         return(
             <div class="city-list" style={{overflowY:'scroll'}}>
-                <City/>
-                <City/>
-                <City/>
+                <City name={"seoul"} info={"hihi"} color={"blue"} />
+                <City name={"london"} info={"text"} color={"red"} />
+                <City />
             </div>
         )
     }
@@ -88,17 +82,22 @@ function Order() {
                         <div className="status" style={{color: moduleType === 2 ? "#6A26ED" : '#000000' }}>2.middle</div>
                         <div className="status" style={{color: moduleType === 3 ? "#6A26ED" : '#000000' }}> 3.base</div>
                     </div>
-                    <div className="next-button" onClick={() => nextHandler(moduleNum)}>
-                        next step
+                    <div className="step-button"> 
+                        <div className="next-button" onClick={previousHandler}>
+                            previous step
+                        </div>
+                        <div className="next-button" onClick={nextHandler}>
+                            next step
+                        </div>
                     </div>
                     
                 </div>
                 <div>{moduleHandler()}</div>
             </div>
             <div className="order-state">
-                <div className="order order-top" style={{color: moduleType === 1 ? "#6A26ED" : '#000000' }}> Top </div>
-                <div className="order order-middle" style={{color: moduleType === 2 ? "#6A26ED" : '#000000' }}> Middle </div>
-                <div className="order order-base" style={{color: moduleType === 3 ? "#6A26ED" : '#000000' }}> Base </div>
+                <ChosenCity name={"top"}/>
+                <ChosenCity name={"middle"}/>
+                <ChosenCity name={"base"}/>
             </div>
         </div>
     );
