@@ -33,7 +33,10 @@
 }
 
 .next-button {
-	margin: 0 2vw 0 2vw;
+	width:5vw;
+	height: 2vw;
+	text-align: center;
+	padding: 2px;
 }
 
 .next-button:hover {

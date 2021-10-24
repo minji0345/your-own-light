@@ -27,7 +27,7 @@ function Order() {
 
     const [moduleType, setModuleType] = useState(moduleNum)
 
-    function nextHandler(moduleNum){
+    const nextHandler = (moduleNum) => {
         moduleNum += 1;
         return(
             setModuleType(moduleNum)
@@ -84,9 +84,9 @@ function Order() {
             <div className="city-display">
                 <div className="status-bar">
                     <div className="status-list">
-                        <div className="status"> 1.top</div>
-                        <div className="status">2.middle</div>
-                        <div className="status"> 3.base</div>
+                        <div className="status" style={{color: moduleType === 1 ? "#6A26ED" : '#000000' }}> 1.top</div>
+                        <div className="status" style={{color: moduleType === 2 ? "#6A26ED" : '#000000' }}>2.middle</div>
+                        <div className="status" style={{color: moduleType === 3 ? "#6A26ED" : '#000000' }}> 3.base</div>
                     </div>
                     <div className="next-button" onClick={() => nextHandler(moduleNum)}>
                         next step
@@ -96,9 +96,9 @@ function Order() {
                 <div>{moduleHandler()}</div>
             </div>
             <div className="order-state">
-                <div className="order order-top"> Top </div>
-                <div className="order order-middle"> Middle </div>
-                <div className="order order-base"> Base </div>
+                <div className="order order-top" style={{color: moduleType === 1 ? "#6A26ED" : '#000000' }}> Top </div>
+                <div className="order order-middle" style={{color: moduleType === 2 ? "#6A26ED" : '#000000' }}> Middle </div>
+                <div className="order order-base" style={{color: moduleType === 3 ? "#6A26ED" : '#000000' }}> Base </div>
             </div>
         </div>
     );
