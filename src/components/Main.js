@@ -3,10 +3,13 @@ import './Main.css';
 import About from './maincontexts/About';
 import Home from './maincontexts/Home';
 import Order from './maincontexts/Order';
+import CheckOut from './maincontexts/CheckOut';
 
 
 function Main() {
     const [contentType, setContentType] = useState(1)
+
+
 
     function displayHandler() {
         if (contentType === 1){
@@ -15,11 +18,15 @@ function Main() {
             );
         } else if (contentType === 2){
             return(
-                <Order/>
+                <Order />
             )
         } else if (contentType === 3){
             return(
                 <About/>
+            )
+        } else if (contentType === 4){
+            return(
+                <CheckOut/>
             )
         }
     }
