@@ -1,11 +1,19 @@
 import React from 'react';
 
 
-function CheckOut() {
+function CheckOut({topModule,middleModule,baseModule}) {
     
     return(
-        <div className="city-block">
-    
+        <div className="checkout-display">
+            <div>
+                {topModule}
+            </div>
+            <div>
+                {middleModule}
+            </div>
+            <div>
+                {baseModule}
+            </div>
         </div>
     )
 };

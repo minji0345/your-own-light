@@ -133,14 +133,14 @@
 }
 
 .order {
-	width: 11vw;
-	height: 11vw;
-	border-radius: 11vw;
+	width: 10vw;
+	height: 10vw;
+	border-radius: 10vw;
 	background-color: white;
 	margin-top: 1.5vw;
 	color: black;
 	text-align: center;
-	line-height: 11vw;
+	line-height: 10vw;
 }
 
 .city-choose{
@@ -153,14 +153,33 @@
 }
 
 .choose-btn{
+	position: relative;
 	width:5vw;
 	align-items: center;
 	text-align: center;
 	padding: 5px;
 	background-color: #ededef;
+	top:-0.8vw;
+	margin-right: 1vw;
 }
 
 .choose-btn:hover{
+	background-color:#6a26ed;
+	color: white;
+	cursor: pointer;
+}
+
+.checkout-btn{
+	margin-top: 1.3vw;
+	align-items: center;
+	text-align: center;
+	width:7vw;
+	padding: 8px 0 8px 0;
+	background-color:black;
+	color: white;
+}
+
+.checkout-btn:hover{
 	background-color:#6a26ed;
 	color: white;
 	cursor: pointer;

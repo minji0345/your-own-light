@@ -9,6 +9,27 @@ import CheckOut from './maincontexts/CheckOut';
 function Main() {
     const [contentType, setContentType] = useState(1)
 
+    const handleOrder =()=>{
+        setContentType(4)
+    }
+
+     /*------------order-state 관리 함수  -------- */
+        const [topModule,setTopModule] = useState('top');
+        const [middleModule,setMiddleModule] = useState('middle');
+        const [baseModule,setBaseModule] = useState('base');
+
+
+        const onTopModule = (cityname) =>{
+            setTopModule(cityname);
+        }
+
+        const onMiddleModule = (cityname) =>{
+            setMiddleModule(cityname);
+        }
+
+        const onBaseModule = (cityname) =>{
+            setBaseModule(cityname);
+        }
 
 
     function displayHandler() {
@@ -18,7 +39,12 @@ function Main() {
             );
         } else if (contentType === 2){
             return(
-                <Order />
+                <Order 
+                topModule={topModule} onTopModule={(cityname)=>onTopModule(cityname)}
+                middleModule={middleModule} onMiddleModule={(cityname)=>onMiddleModule(cityname)} 
+                baseModule={baseModule} onBaseModule={(cityname)=>onBaseModule(cityname)} 
+                handleOrder = {handleOrder}
+                />
             )
         } else if (contentType === 3){
             return(
@@ -26,7 +52,11 @@ function Main() {
             )
         } else if (contentType === 4){
             return(
-                <CheckOut/>
+                <CheckOut
+                    topModule={topModule}
+                    middleModule={middleModule}
+                    baseModule={baseModule}
+                />
             )
         }
     }

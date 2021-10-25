@@ -31,13 +31,13 @@ function City({name,info,color, cityHandler}) {
 function ChosenCity({name}) {
 
     return(
-        <div className="order order-top">{name}</div>
+        <div className="order state-process">{name}</div>
     )
 };
 
 
 
-function Order() {
+function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onBaseModule,handleOrder}) {
 
 
     /*------------city display 관리 함수  -------- */
@@ -72,25 +72,6 @@ function Order() {
         } else {
             setModuleType(1)
         }
-    }
-
-     /*------------order-state 관리 함수  -------- */
-    const [topModule,setTopModule] = useState('top');
-    const [middleModule,setMiddleModule] = useState('middle');
-    const [baseModule,setBaseModule] = useState('base');
-
-
-
-    const onTopModule = (name) =>{
-        setTopModule(name);
-    }
-
-    const onMiddleModule = (name) =>{
-        setMiddleModule(name);
-    }
-
-    const onBaseModule = (name) =>{
-        setBaseModule(name);
     }
 
     
@@ -151,6 +132,7 @@ function Order() {
                 <ChosenCity name={topModule}/>
                 <ChosenCity name={middleModule}/>
                 <ChosenCity name={baseModule}/>
+                <div className="checkout-btn" onClick={()=>handleOrder()}>complete</div>
             </div>
         </div>
     );
