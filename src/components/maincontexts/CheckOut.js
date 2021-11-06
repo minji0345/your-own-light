@@ -7,7 +7,7 @@ function CheckOut({topModule,middleModule,baseModule,handleOrder}) {
     return(
         <div className="checkout-display">
             <div className="checkout-main">
-                <div className="checkout-info">
+                <div className="checkout-info check-module">
                         <div>
                             {topModule}
                         </div>

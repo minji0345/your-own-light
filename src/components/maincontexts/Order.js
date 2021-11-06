@@ -129,28 +129,28 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
     return (
         <div className="main-order">
             <div className="city-display">
-            <div className="status-bar">
-                    { moduleType !== 1 ? 
-                    <div className="prev-button" onClick={previousHandler}>
-                        <img src={back} alt='back'/>
-                    </div> : <div className="prev-button1"></div> }
-                    <div className="status-list">
-                        <div className="status" style={{color: moduleType === 1 ? "#6A26ED" : '#000000' }}> 1.top</div>
-                        <div className="status" style={{color: moduleType === 2 ? "#6A26ED" : '#000000' }}>2.middle</div>
-                        <div className="status" style={{color: moduleType === 3 ? "#6A26ED" : '#000000' }}> 3.base</div>
+                <div className="status-bar">
+                        { moduleType !== 1 ? 
+                        <div className="prev-button" onClick={previousHandler}>
+                            <img src={back} alt='back'/>
+                        </div> : <div className="prev-button1"></div> }
+                        <div className="status-list">
+                            <div className="status" style={{color: moduleType === 1 ? "#6A26ED" : '#000000' }}> 1.top</div>
+                            <div className="status" style={{color: moduleType === 2 ? "#6A26ED" : '#000000' }}>2.middle</div>
+                            <div className="status" style={{color: moduleType === 3 ? "#6A26ED" : '#000000' }}> 3.base</div>
+                        </div>
+                        <div className="next-button" onClick={nextHandler}>
+                            next step
+                        </div>
                     </div>
-                    <div className="next-button" onClick={nextHandler}>
-                        next step
-                    </div>
+                    <div>{moduleHandler()}</div>
                 </div>
-                <div>{moduleHandler()}</div>
-            </div>
-            <div className="order-state">
-                <div className="progress">Your Progress</div>
-                    <ChosenCity name={topModule} seoul = {seoul}/>
-                    <ChosenCity name={middleModule}/>
-                    <ChosenCity name={baseModule}/>
-                <div className="checkout-btn" onClick={()=>handleOrder(4)}>complete</div>
+                <div className="order-state">
+                    <div className="progress">Your Progress</div>
+                        <ChosenCity name={topModule} seoul = {seoul}/>
+                        <ChosenCity name={middleModule}/>
+                        <ChosenCity name={baseModule}/>
+                    <div className="checkout-btn" onClick={()=>handleOrder(4)}>complete</div>
             </div>
         </div>
     );
