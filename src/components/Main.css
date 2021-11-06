@@ -1,3 +1,15 @@
+@-keyframes scale-up-hor-center{0%{-webkit-transform:scaleX(.4);transform:scaleX(.4)}100%{-webkit-transform:scaleX(1);transform:scaleX(1)}}@keyframes scale-up-hor-center{0%{-webkit-transform:scaleX(.4);transform:scaleX(.4)}100%{-webkit-transform:scaleX(1);transform:scaleX(1)}}
+@-keyframes slide-in-fwd-center{0%{-webkit-transform:translateZ(-1400px);transform:translateZ(-1400px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes slide-in-fwd-center{0%{-webkit-transform:translateZ(-1400px);transform:translateZ(-1400px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
+@-keyframes focus-in-expand{0%{letter-spacing:-.5em;-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes focus-in-expand{0%{letter-spacing:-.5em;-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}
+@keyframes fade{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
 .main {
 	width: 100vw;
 	height: 100vh;
@@ -23,7 +35,13 @@
 	align-items: center;
 	line-height: 0.2vw;
 	margin: 1vw;
+	animation-name: focus-in-expand, fade;
+    animation-duration: 1s, 1s;
+    animation-delay: 0.5s, 0.5s;
+    animation-fill-mode:both, both;
 }
+
+
 .first-btn {
 	display: flex;
 	flex-direction: row;
@@ -68,6 +86,10 @@
 	width: 80vw;
 	height: 100vh;
 	border-top: solid 1px black;
+	animation-name: scale-up-hor-center, fade;
+    animation-duration: 1s, 1s;
+    animation-delay: 0.5s, 0.5s;
+    animation-fill-mode:both, both;
 }
 
 .nickname-input {
@@ -77,6 +99,10 @@
 	border: none;
 	color: #a6a6a7;
 	font-size: 1rem;
+	animation-name: focus-in-expand, fade;
+    animation-duration: 1s, 1s;
+    animation-delay: 0.5s, 0.5s;
+    animation-fill-mode:both, both;
 }
 
 .nickname-input:focus {
@@ -94,6 +120,10 @@
 	text-decoration: none;
 	margin: 2vw;
 	font-size: 1rem;
+	animation-name: focus-in-expand, fade;
+    animation-duration: 1s, 1s;
+    animation-delay: 0.5s, 0.5s;
+    animation-fill-mode:both, both;
 }
 
 .nick-btn:hover {
@@ -106,4 +136,8 @@
 	color: black;
 	text-decoration: none;
 	padding: 3vw;
+	animation-name: focus-in-expand, fade;
+    animation-duration: 1s, 1s;
+    animation-delay: 2s, 2s;
+    animation-fill-mode:both, both;
 }

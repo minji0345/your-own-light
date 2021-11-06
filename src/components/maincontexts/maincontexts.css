@@ -114,6 +114,7 @@
 
 .city-block:hover{
 	cursor: pointer;
+	/*box-shadow: 5px 5px 12px 1px rgb(200, 200, 200);*/
 	box-shadow: 0px 5px 15px 5px rgba(240, 240, 240, 0.8);
 }
 
@@ -167,6 +168,7 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	transition: all 1s ease;
 }
 
 .city-choose{
@@ -220,6 +222,10 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	animation-name: focus-in-expand, fade;
+    animation-duration: 1s, 1s;
+    /* animation-delay: 0.5s, 0.5s; */
+    animation-fill-mode:both, both;
 }
 
 .main-home{
