@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './maincontexts.css';
+import back from './assets/back.svg'
 
 
 
 
-function City({name,info,color, cityHandler}) {
+function City({name,info,color, cityHandler, seoul}) {
     
     return(
         <div className="city-block">
@@ -12,11 +13,13 @@ function City({name,info,color, cityHandler}) {
                 {name}
             </div>
             <div className="city-info">
-                <div className="city-color" style={{backgroundColor: color }}>
-
+                <div className="city-module">
+                    <img src={seoul} alt="seoul"/>
                 </div>
                 <div className="city-description">
-                    {info}
+                        <div className="city-color" style={{backgroundColor: color }}>
+
+                        </div>
                 </div>
             </div>
             <div className="city-choose">
@@ -27,17 +30,31 @@ function City({name,info,color, cityHandler}) {
     )
 };
 
+function CityInfo({name,info,color, cityHandler, seoul}) {
+    
+    return(
+        <div className="city-block">
+            {info}
+        </div>
+    )
+};
 
-function ChosenCity({name}) {
+
+function ChosenCity({name, seoul}) {
 
     return(
-        <div className="order order-top">{name}</div>
+        <div className="order">
+            {/* <div className="city-module1">
+                    <img src={seoul} alt="seoul"/>
+            </div> */}
+            {name}
+        </div>
     )
 };
 
 
 
-function Order() {
+function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onBaseModule,handleOrder,seoul}) {
 
 
     /*------------city display 관리 함수  -------- */
@@ -74,35 +91,16 @@ function Order() {
         }
     }
 
-     /*------------order-state 관리 함수  -------- */
-    const [topModule,setTopModule] = useState('top');
-    const [middleModule,setMiddleModule] = useState('middle');
-    const [baseModule,setBaseModule] = useState('base');
-
-
-
-    const onTopModule = (name) =>{
-        setTopModule(name);
-    }
-
-    const onMiddleModule = (name) =>{
-        setMiddleModule(name);
-    }
-
-    const onBaseModule = (name) =>{
-        setBaseModule(name);
-    }
-
     
     /*------------city list 관리 함수  -------- */
     
     function CityBlockTop() {
         return(
             <div class="city-list" style={{overflowY:'auto',}}>
-                <City name={"seoul"} info={"hihi"} color={"blue"} cityHandler={(cityname)=> onTopModule(cityname)}/>
-                <City name={"london"} info={"text"} color={"red"} cityHandler={(cityname)=> onTopModule(cityname)}/>
-                <City name={"singapore"} info={"text"} color={"orange"} cityHandler={(cityname)=> onTopModule(cityname)}/>
-                <City name={"hawaii"} info={"text"} color={"pink"} cityHandler={(cityname)=> onTopModule(cityname)}/>
+                <City name={"seoul"} info={"hihi"} color={"blue"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul}/>
+                <City name={"london"} info={"text"} color={"#438DFC"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul}/>
+                <City name={"singapore"} info={"text"} color={"orange"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul}/>
+                <City name={"hawaii"} info={"text"} color={"pink"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul}/>
             </div>
         )
     }
@@ -134,7 +132,7 @@ function Order() {
             <div className="status-bar">
                     { moduleType !== 1 ? 
                     <div className="prev-button" onClick={previousHandler}>
-                        previous step
+                        <img src={back} alt='back'/>
                     </div> : <div className="prev-button1"></div> }
                     <div className="status-list">
                         <div className="status" style={{color: moduleType === 1 ? "#6A26ED" : '#000000' }}> 1.top</div>
@@ -148,9 +146,11 @@ function Order() {
                 <div>{moduleHandler()}</div>
             </div>
             <div className="order-state">
-                <ChosenCity name={topModule}/>
-                <ChosenCity name={middleModule}/>
-                <ChosenCity name={baseModule}/>
+                <div className="progress">Your Progress</div>
+                    <ChosenCity name={topModule} seoul = {seoul}/>
+                    <ChosenCity name={middleModule}/>
+                    <ChosenCity name={baseModule}/>
+                <div className="checkout-btn" onClick={()=>handleOrder(4)}>complete</div>
             </div>
         </div>
     );
