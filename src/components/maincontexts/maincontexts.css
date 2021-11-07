@@ -219,6 +219,7 @@
 
 .checkout-display{
 	width: 80vw;
+	height: 70vh;
 	background-color: white;
 	display: flex;
 	flex-direction: column;

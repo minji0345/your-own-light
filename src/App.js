@@ -1,5 +1,6 @@
 import React, { useState } from 'react'  
 import Main from './components/Main';
+import Complete from './components/maincontexts/Complete';
 import { Routes, Route, Link } from "react-router-dom";
 import './components/Main.css';
 import homelogo from "./mp4/edit.mp4";
@@ -39,11 +40,12 @@ function App() {
   return (
   <>
     <Routes>
+        <Route exact path="/" element={<First />} />
+        <Route exact path="/nickname" element={<Nickname onChange={onChange} nickname={nickname}/>} />
+        <Route exact path="/main" element={<Main nickname={nickname}/>} />
+        <Route exact path="/complete" element={<Complete nickname={nickname}/>} />
         <Route path="/" element={<First />} />
-        <Route path="/main" element={<Main nickname={nickname}/>} />
-        <Route path="/nickname" element={<Nickname onChange={onChange} nickname={nickname}/>} />
     </Routes>
-    {/* <Start onChange={onChange} nickname={nickname}/> */}
   </>
   );
 }

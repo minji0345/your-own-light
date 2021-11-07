@@ -78,10 +78,11 @@ function Main({nickname}) {
     }
 
     return (
+    <>
         <div className="main" style={{backgroundColor:backColor}}>
             <div className="header">
                 <div className="nickname">
-                    <div className="first-btn"><Link to="/"><img alt='first' src={first}/></Link> Hello,{nickname}! We hope you make amazing Light.</div>
+                    <div className="first-btn"><Link to="/nickname"><img alt='first' src={first}/></Link> Hello,{nickname}! We hope you make amazing Light.</div>
                 </div>
                 <div className="header-nav">
                     <div className="header-button" onClick={() => setContentType(1)} style={{color: contentType === 1 ? "#6A26ED" : '#000000' }}>Home</div>
@@ -93,6 +94,7 @@ function Main({nickname}) {
                 {displayHandler()}
             </div>
         </div>
+    </>
     );
 };
 

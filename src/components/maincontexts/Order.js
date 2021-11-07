@@ -152,7 +152,7 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
                         <ChosenCity name={baseModule}/>
                     <div className="checkout-btn" onClick={()=>handleOrder(4)}>complete</div>
             </div>
-        </div>
+    </div>
     );
 };
 
