@@ -31,7 +31,7 @@ function City({name,info,color, cityHandler, seoul,handleColor}) {
             </div>
             <div className="city-choose">
                 <div ></div>
-                <div className="choose-btn" onClick={() => cityHandler(name)} onMouseEnter={()=>handleColor(color)}>choose</div>
+                <div className="choose-btn" onClick={() => clickHandler(name,color)}>choose</div>
             </div>
         </div>
     )
