@@ -36,7 +36,7 @@
 
 .prev-button {
 	height: 2vw;
-	width: 7vw;
+	width: 8vw;
 	margin: 0 2vw 0 2vw;
 	display: flex;
 	text-align: center;
@@ -45,8 +45,7 @@
 }
 
 .prev-button img{
-	height: 2vw;
-	width: 7vw;
+	height: 1.2vw;
 }
 
 
@@ -58,7 +57,7 @@
 .prev-button1 {
 	height: 2vw;
 	margin: 0 2vw 2vw 0;
-	width: 6vw;
+	width: 8vw;
 	display: flex;
 	text-align: center;
 	justify-content: center;
@@ -68,6 +67,7 @@
 
 .next-button {
 	height: 2vw;
+	width: 8vw;
 	margin: 0 2vw 2vw 0;
 	display: flex;
 	text-align: center;
@@ -78,6 +78,10 @@
 .next-button:hover {
 	background-color: white;
 	cursor: pointer;
+}
+
+.next-button img{
+	height: 1.2vw;
 }
 
 .order-state {
@@ -243,6 +247,9 @@
 	align-items: center;
 	align-content: center;
 	margin: auto;
+	width: 30vw;
+	font-size: 0.8rem;
+	text-align: center;
 }
 
 .check-btns{
@@ -306,4 +313,11 @@
 	width: 7vw;
 	height: 7vw;
 	position:relative;
+}
+
+.p5-back{
+	position: absolute;
+	z-index: -100;
+	top:0;
+	left: 0;
 }

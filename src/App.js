@@ -5,6 +5,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import './components/Main.css';
 import homelogo from "./mp4/edit.mp4";
 
+
 function Nickname({onChange}) {
 
   return(

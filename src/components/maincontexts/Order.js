@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './maincontexts.css';
 import back from './assets/back.svg'
+import nxt1 from './assets/nxt1.svg'
+import nxt2 from './assets/nxt2.svg'
 
 
 
@@ -139,9 +141,10 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
                             <div className="status" style={{color: moduleType === 2 ? "#6A26ED" : '#000000' }}>2.middle</div>
                             <div className="status" style={{color: moduleType === 3 ? "#6A26ED" : '#000000' }}> 3.base</div>
                         </div>
+                        { moduleType !== 1 ? 
                         <div className="next-button" onClick={nextHandler}>
-                            next step
-                        </div>
+                            <img src={nxt1} alt='back'/>
+                        </div> : <div className="next-button" onClick={nextHandler}> <img src={nxt1} alt='back'/></div> }
                     </div>
                     <div>{moduleHandler()}</div>
                 </div>

@@ -28,7 +28,9 @@ function Home() {
                 </video>
             </div>
             <div className="home-text"> 
-                Curate only your light
+                오직 자신만의 빛을 ‘큐레이팅’하다.
+                내가 조색한 나만의 조명은 공간을 재구성하며 그 안속에 색다른 빛을 불어넣는다.
+                당신의 손에서 탄생한 조명은 새로운 경험을 만드는 특별한 분위기를 조성한다.
             </div>
         </div>
     );

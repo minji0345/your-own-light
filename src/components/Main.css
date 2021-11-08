@@ -75,12 +75,26 @@
 	align-items: center;
 	text-align: center;
 	padding: 5px;
+	margin: 0 0.5vw 0 0.5vw;
 }
 
 .header-button:hover {
 	cursor: pointer;
 	background-color: white;
 }
+
+.logout{
+	background-color: black;
+}
+
+.logout:hover{
+	background-color:#6a26ed;
+}
+
+.logout a{
+	color: white;
+}
+
 
 .main-context {
 	width: 80vw;
@@ -135,9 +149,13 @@
 	font-size: 1.1rem;
 	color: black;
 	text-decoration: none;
-	padding: 3vw;
+	padding: 0.5vw 1vw 0.5vw 1vw;
 	animation-name: focus-in-expand, fade;
     animation-duration: 1s, 1s;
     animation-delay: 2s, 2s;
     animation-fill-mode:both, both;
+}
+
+.start-btn:hover{
+	background-color: white;
 }
