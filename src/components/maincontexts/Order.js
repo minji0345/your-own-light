@@ -8,6 +8,9 @@ import nxt2 from './assets/nxt2.svg'
 
 
 function City({name,info,color, cityHandler, seoul,handleColor}) {
+
+
+    
     
     const clickHandler = (name,color) => {
         handleColor(color);
@@ -64,6 +67,8 @@ function ChosenCity({name, seoul}) {
 function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onBaseModule,handleOrder,seoul,handleColor}) {
 
 
+
+
     /*------------city display 관리 함수  -------- */
 
 
@@ -103,7 +108,7 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
     
     function CityBlockTop() {
         return(
-            <div class="city-list" style={{overflowY:'scroll'}}>
+            <div class="city-list scroll" style={{overflowY:'scroll'}}>
                 <City name={"seoul"} info={"hihi"} color={"blue"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
                 <City name={"london"} info={"text"} color={"#438DFC"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
                 <City name={"singapore"} info={"text"} color={"orange"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
@@ -114,7 +119,7 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
 
     function CityBlockMiddle() {
         return(
-            <div class="city-list" style={{overflowY:'scroll'}}>
+            <div class="city-list scroll" style={{overflowY:'scroll'}}>
                 <City name={"Bali"} info={"hihi"} color={"deeppink"} cityHandler={(cityname)=> onMiddleModule(cityname)} handleColor = {handleColor}/>
                 <City name={"Naypiyidaw"} info={"text"} color={"lime"} cityHandler={(cityname)=> onMiddleModule(cityname)} handleColor = {handleColor}/>
                 <City name={"El Calafate"} info={"text"} color={"coral"} cityHandler={(cityname)=> onMiddleModule(cityname)} handleColor = {handleColor}/>
@@ -124,7 +129,7 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
 
     function CityBlockBase() {
         return(
-            <div class="city-list" style={{overflowY:'scroll'}}>
+            <div class="city-list scroll" style={{overflowY:'scroll'}}>
                 <City name={"paris"} info={"hihi"} color={"gray"} cityHandler={(cityname)=> onBaseModule (cityname)} handleColor = {handleColor}/>
                 <City name={"Reykjavik"} info={"text"} color={"gray"} cityHandler={(cityname)=> onBaseModule (cityname)} handleColor = {handleColor}/>
                 <City name={"Santiago"} info={"text"} color={"gray"} cityHandler={(cityname)=> onBaseModule (cityname)} handleColor = {handleColor}/>
