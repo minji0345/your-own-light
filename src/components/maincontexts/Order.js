@@ -153,9 +153,9 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
                             <img src={back} alt='back'/>
                         </div> : <div className="prev-button1"></div> }
                         <div className="status-list">
-                            <div className="status" style={{color: moduleType === 1 ? "#6A26ED" : '#000000' }}> 1.top</div>
-                            <div className="status" style={{color: moduleType === 2 ? "#6A26ED" : '#000000' }}>2.middle</div>
-                            <div className="status" style={{color: moduleType === 3 ? "#6A26ED" : '#000000' }}> 3.base</div>
+                            <div className="status" style={{color: moduleType === 1 ? "#6A26ED" : '#000000' }} onClick={()=>setModuleType(1)}> 1.top</div>
+                            <div className="status" style={{color: moduleType === 2 ? "#6A26ED" : '#000000' }} onClick={()=>setModuleType(2)}>2.middle</div>
+                            <div className="status" style={{color: moduleType === 3 ? "#6A26ED" : '#000000' }} onClick={()=>setModuleType(3)}> 3.base</div>
                         </div>
                         { moduleType !== 1 ? 
                         <div className="next-button" onClick={nextHandler}>
