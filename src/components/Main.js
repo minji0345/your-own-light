@@ -57,6 +57,7 @@ function Main({nickname}) {
                 middleModule={middleModule} onMiddleModule={(cityname)=>onMiddleModule(cityname)} 
                 baseModule={baseModule} onBaseModule={(cityname)=>onBaseModule(cityname)} 
                 handleOrder = {handleOrder}
+                handleColor = {handleColor}
                 seoul = {seoul}
                 />
             )
