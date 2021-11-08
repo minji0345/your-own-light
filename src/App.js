@@ -1,6 +1,7 @@
 import React, { useState } from 'react'  
 import Main from './components/Main';
 import Complete from './components/maincontexts/Complete';
+import About from './components/maincontexts/About';
 import { Routes, Route, Link } from "react-router-dom";
 import './components/Main.css';
 import homelogo from "./mp4/edit.mp4";
@@ -45,6 +46,7 @@ function App() {
         <Route exact path="/nickname" element={<Nickname onChange={onChange} nickname={nickname}/>} />
         <Route exact path="/main" element={<Main nickname={nickname}/>} />
         <Route exact path="/complete" element={<Complete nickname={nickname}/>} />
+        <Route exact path="/about" element={<About/>} />
         <Route path="/" element={<First />} />
     </Routes>
   </>
