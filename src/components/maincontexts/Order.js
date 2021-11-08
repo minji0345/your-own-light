@@ -103,7 +103,7 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
     
     function CityBlockTop() {
         return(
-            <div class="city-list" style={{overflowY:'auto',}}>
+            <div class="city-list" style={{overflowY:'scroll'}}>
                 <City name={"seoul"} info={"hihi"} color={"blue"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
                 <City name={"london"} info={"text"} color={"#438DFC"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
                 <City name={"singapore"} info={"text"} color={"orange"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>

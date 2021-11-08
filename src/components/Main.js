@@ -23,6 +23,11 @@ function Main({nickname}) {
         setBackColor(color);
     }
 
+    const onHome = () => {
+        setBackColor('#f1f0f3');
+        setContentType(1);
+    }
+
 
 
 
@@ -86,7 +91,7 @@ function Main({nickname}) {
                     <div className="first-btn"><Link to="/nickname"><img alt='first' src={first}/></Link> Hello,{nickname}! We hope you make amazing Light.</div>
                 </div>
                 <div className="header-nav">
-                    <div className="header-button" onClick={() => setContentType(1)} style={{color: contentType === 1 ? "#6A26ED" : '#000000' }}>Home</div>
+                    <div className="header-button" onClick={() => onHome()} style={{color: contentType === 1 ? "#6A26ED" : '#000000' }}>Home</div>
                     <div className="header-button" onClick={() => setContentType(2)} style={{color: contentType === 2 ? "#6A26ED" : '#000000' }}>Order</div>
                     <div className="header-button" onClick={() => setContentType(3)} style={{color: contentType === 3 ? "#6A26ED" : '#000000' }}>About</div>
                     <div className="header-button logout"><Link style={{textDecoration:'none'}}to="/">LOGOUT</Link></div>

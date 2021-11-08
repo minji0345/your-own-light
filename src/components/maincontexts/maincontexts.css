@@ -44,12 +44,11 @@
 	align-items: center;
 }
 
-.prev-button img{
+.prev-button img {
 	height: 1.2vw;
 }
 
-
-.prev-button:hover{
+.prev-button:hover {
 	background-color: white;
 	cursor: pointer;
 }
@@ -63,7 +62,6 @@
 	justify-content: center;
 	align-items: center;
 }
-
 
 .next-button {
 	height: 2vw;
@@ -80,7 +78,7 @@
 	cursor: pointer;
 }
 
-.next-button img{
+.next-button img {
 	height: 1.2vw;
 }
 
@@ -96,17 +94,19 @@
 }
 
 .city-list {
+	position: relative;
+	top: 20px;
 	width: 55vw;
 	height: 60vh;
 	background-color: #f8f8f9;
 	padding: 1vw;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 }
 
 .city-block {
+	position: relative;
 	background-color: white;
 	margin: 2vh 0 2vh 0;
 	width: 50vw;
@@ -116,7 +116,7 @@
 	flex-direction: column;
 }
 
-.city-block:hover{
+.city-block:hover {
 	cursor: pointer;
 	/*box-shadow: 5px 5px 12px 1px rgb(200, 200, 200);*/
 	box-shadow: 0px 5px 15px 5px rgba(240, 240, 240, 0.8);
@@ -175,53 +175,53 @@
 	transition: all 1s ease;
 }
 
-.city-choose{
+.city-choose {
 	position: relative;
 	display: flex;
-	flex-direction:row;
+	flex-direction: row;
 	justify-content: space-between;
 	align-content: center;
 	align-items: center;
 }
 
-.choose-btn{
+.choose-btn {
 	position: relative;
-	width:5vw;
+	width: 5vw;
 	align-items: center;
 	text-align: center;
 	padding: 5px;
 	background-color: #ededef;
-	top:-0.8vw;
+	top: -0.8vw;
 	margin-right: 1vw;
 }
 
-.choose-btn:hover{
-	background-color:#6a26ed;
+.choose-btn:hover {
+	background-color: #6a26ed;
 	color: white;
 	cursor: pointer;
 }
 
-.checkout-btn{
+.checkout-btn {
 	margin-top: 1.3vw;
 	align-items: center;
 	text-align: center;
-	width:7vw;
+	width: 7vw;
 	padding: 8px 0 8px 0;
-	background-color:black;
+	background-color: black;
 	color: white;
 }
 
-.checkout-btn:hover{
-	background-color:#6a26ed;
+.checkout-btn:hover {
+	background-color: #6a26ed;
 	color: white;
 	cursor: pointer;
 }
 
-.progress{
+.progress {
 	/* margin: 1vw; */
 }
 
-.checkout-display{
+.checkout-display {
 	width: 80vw;
 	height: 70vh;
 	background-color: white;
@@ -231,7 +231,7 @@
 	align-items: center;
 }
 
-.main-home{
+.main-home {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -240,7 +240,7 @@
 	margin-bottom: 5vw;
 }
 
-.home-text{
+.home-text {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -252,72 +252,69 @@
 	text-align: center;
 }
 
-.check-btns{
+.check-btns {
 	display: flex;
 	flex-direction: row;
 }
 
-.back-home{
+.back-home {
 	margin: 1vw 0.5vw 1vw 0.5vw;
 	width: 7vw;
 	align-items: center;
 	text-align: center;
 	padding: 8px 5px 8px 5px;
 	color: white;
-	background-color:#6a26ed;
+	background-color: #6a26ed;
 }
 
-.back-home:hover{
+.back-home:hover {
 	cursor: pointer;
-	background-color:black;
+	background-color: black;
 	color: white;
 }
 
-.motionlogo{
-
+.motionlogo {
 }
 
-.motionlogo:hover{
+.motionlogo:hover {
 	cursor: pointer;
 }
 
-.logoimg{
+.logoimg {
 	position: absolute;
 }
 
-.checkout-main{
+.checkout-main {
 	display: flex;
 	flex-direction: row;
-	
-
 }
 
-.checkout-info{
+.checkout-info {
 	width: 30vw;
 	height: 30vw;
 	background-color: white;
 	display: flex;
-	flex-direction:column;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
 
-.check-module{
+.check-module {
 	animation-name: focus-in-expand, fade;
-    animation-duration: 1s, 1s;
-    /* animation-delay: 0.5s, 0.5s; */
-    animation-fill-mode:both, both;
+	animation-duration: 1s, 1s;
+	/* animation-delay: 0.5s, 0.5s; */
+	animation-fill-mode: both, both;
 }
 
-.city-module1 img{
+.city-module1 img {
 	width: 7vw;
 	height: 7vw;
-	position:relative;
+	position: relative;
 }
 
-.p5-back{
+.p5-back {
 	position: absolute;
 	z-index: -100;
-	top:0;
+	top: 0;
 	left: 0;
 }
