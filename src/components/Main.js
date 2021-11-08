@@ -11,7 +11,7 @@ import seoul from "./maincontexts/imgs/seoul.png";
 
 
 
-function Main({nickname}) {
+function Main({nickname,colorOne,colorTwo,colorThree}) {
     const [contentType, setContentType] = useState(1)
     const [backColor, setBackColor] = useState('#f1f0f3')
 

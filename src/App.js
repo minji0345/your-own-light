@@ -34,6 +34,17 @@ function App() {
 
   const [nickname, setNickName] = useState('stranger');
 
+  const [colorOne, setColorOne] = useState('black');
+  const [colorTwo, setColorTwo] = useState('gray');
+  const [colorThree,setColorThree] = useState('white');
+
+  const gradientBack = (colorOne,colorTwo,colorThree) => {
+    setColorOne(colorOne);
+    setColorTwo(colorTwo);
+    setColorThree(colorThree);
+  }
+  
+
   const onChange = (e) => {
     setNickName(e.target.value)		//이벤트 발생한 value값으로 {text} 변경
   }
@@ -44,8 +55,8 @@ function App() {
     <Routes>
         <Route exact path="/" element={<First />} />
         <Route exact path="/nickname" element={<Nickname onChange={onChange} nickname={nickname}/>} />
-        <Route exact path="/main" element={<Main nickname={nickname}/>} />
-        <Route exact path="/complete" element={<Complete nickname={nickname}/>} />
+        <Route exact path="/main" element={<Main nickname={nickname} />} />
+        <Route exact path="/complete" element={<Complete nickname={nickname} colorOne={colorOne} colorTwo={colorTwo} colorThree={colorThree} gradientBack={gradientBack}/>} />
         <Route exact path="/about" element={<About/>} />
         <Route path="/" element={<First />} />
     </Routes>

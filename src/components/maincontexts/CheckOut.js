@@ -5,11 +5,10 @@ import { Routes, Route, Link } from "react-router-dom";
 
 function CheckOut({topModule,middleModule,baseModule,handleOrder}) {
 
-    const [colorOne, setColorOne] = useState('black');
-    const [colorTwo, setColorTwo] = useState('gray');
     
     return(
-        <div className="checkout-display" style={{background: `linear-gradient(${colorOne}, ${colorTwo})`}}>
+        // style={{background: `linear-gradient(${colorOne}, ${colorTwo})`}}
+        <div className="checkout-display">
             <div className="checkout-main">
                 <div className="checkout-info check-module">
                         <div>

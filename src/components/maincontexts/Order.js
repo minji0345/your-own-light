@@ -7,47 +7,43 @@ import nxt2 from './assets/nxt2.svg'
 
 
 
-function City({name,info,color, cityHandler, seoul,handleColor}) {
+function City({name,info,color, cityHandler, seoul,handleColor,hoverInfo}) {
 
 
-    
-    
     const clickHandler = (name,color) => {
         handleColor(color);
         cityHandler(name);
-    }
+    };
 
-    return(
-        <div className="city-block">
-            <div className="city-name">
-                {name}
-            </div>
-            <div className="city-info">
-                <div className="city-module">
-                    <img src={seoul} alt="seoul"/>
+
+    // return(
+    //     <div className="city-block" style={{color:"white",backgroundColor:"black"}}>
+    //         {info}
+    //     </div>
+
+        return(
+            <div className="city-block">
+                <div className="city-name">
+                    {name}
                 </div>
-                <div className="city-description">
-                        <div className="city-color" style={{backgroundColor: color }}>
-
-                        </div>
-                </div>
-            </div>
-            <div className="city-choose">
-                <div ></div>
-                <div className="choose-btn" onClick={() => clickHandler(name,color)}>choose</div>
-            </div>
-        </div>
-    )
-};
-
-function CityInfo({name,info,color, cityHandler, seoul}) {
+                <div className="city-info">
+                    <div className="city-module">
+                        <img src={seoul} alt="seoul"/>
+                    </div>
+                    <div className="city-description">
+                            <div className="city-color" style={{backgroundColor: color}}>
     
-    return(
-        <div className="city-block">
-            {info}
-        </div>
-    )
+                            </div>
+                    </div>
+                </div>
+                <div className="city-choose">
+                    <div ></div>
+                    <div className="choose-btn" onClick={() => clickHandler(name,color)}>choose</div>
+                </div>
+            </div>
+        )
 };
+
 
 
 function ChosenCity({name, seoul}) {
@@ -69,7 +65,16 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
 
 
 
-    /*------------city display 관리 함수  -------- */
+    /*------------city block display 관리 함수  -------- */
+    const[hoverInfo, setHoverInfo] = useState(true);
+
+    // const inCityBlock = () => {
+    //     setHoverInfo(2);
+    // }
+
+    // const outCityBlock = () => {
+    //     setHoverInfo(1);
+    // }
 
 
     /*------------status-bar 관리 함수  -------- */
@@ -109,10 +114,11 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
     function CityBlockTop() {
         return(
             <div class="city-list scroll" style={{overflowY:'scroll'}}>
-                <City name={"seoul"} info={"hihi"} color={"blue"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
-                <City name={"london"} info={"text"} color={"#438DFC"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
-                <City name={"singapore"} info={"text"} color={"orange"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
-                <City name={"hawaii"} info={"text"} color={"pink"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
+                <City name={"seoul"} info={"hihi"} color={"blue"} cityHandler={(cityname)=> onTopModule(cityname)} 
+                    seoul = {seoul} handleColor = {handleColor} hoverInfo={hoverInfo}/>
+                <City name={"london"} info={"text"} color={"#438DFC"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor} hoverInfo={hoverInfo}/>
+                <City name={"singapore"} info={"text"} color={"orange"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor} hoverInfo={hoverInfo}/>
+                <City name={"hawaii"} info={"text"} color={"pink"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor} hoverInfo={hoverInfo}/>
             </div>
         )
     }
