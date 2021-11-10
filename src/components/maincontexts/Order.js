@@ -163,7 +163,7 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
                         <ChosenCity name={topModule} seoul = {seoul}/>
                         <ChosenCity name={middleModule}/>
                         <ChosenCity name={baseModule}/>
-                    <div className="checkout-btn" onClick={()=>handleOrder(4)}>complete</div>
+                    <div className="checkout-btn" onClick={() => handleOrder(4)}  style={{ backgroundColor : moduleType === 3 ? "#6A26ED" : "#EDEDEF" }}>complete</div>
             </div>
     </div>
     );
