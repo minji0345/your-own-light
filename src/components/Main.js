@@ -14,6 +14,8 @@ import seoul from "./maincontexts/imgs/seoul.png";
 function Main({nickname}) {
     const [contentType, setContentType] = useState(1)
     const [backColor, setBackColor] = useState('#f1f0f3')
+    const [backColorOne, setBackColorOne] = useState('#f1f0f3')
+    const [backColorTwo, setBackColorTwo] = useState('#f1f0f3')
 
     const handleOrder =(a)=>{
         setContentType(a)
@@ -22,6 +24,15 @@ function Main({nickname}) {
     const handleColor = (color) =>{
         setBackColor(color);
     }
+
+    const handleBackTwo = (color) =>{
+        setBackColorOne(color);
+    }
+
+    const handleBackOne = (color) =>{
+        setBackColorTwo(color);
+    }
+
 
     const onHome = () => {
         setBackColor('#f1f0f3');
@@ -85,7 +96,7 @@ function Main({nickname}) {
 
     return (
     <>
-        <div className="main" style={{backgroundColor:backColor}}>
+        <div className="main" style={{background: `linear-gradient(${backColor}, ${backColor},${backColor})`}}>
             <div className="header">
                 <div className="nickname">
                     <div className="first-btn"><Link to="/nickname"><img alt='first' src={first}/></Link> Hello,{nickname}! We hope you make amazing Light.</div>
