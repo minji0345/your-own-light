@@ -32,6 +32,9 @@ function City({name,info,color, cityHandler, seoul,handleColor}) {
                         </div>
                 </div>
             </div>
+            <div>
+                city information
+            </div>
             <div className="city-choose">
                 <div ></div>
                 <div className="choose-btn" onClick={() => clickHandler(name,color)}>choose</div>
@@ -109,7 +112,7 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
     function CityBlockTop() {
         return(
             <div class="city-list scroll" style={{overflowY:'scroll'}}>
-                <City name={"seoul"} info={"hihi"} color={"blue"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
+                <City name={"seoul"} info={"hihi"} color={"rgb(32,24,545)"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
                 <City name={"london"} info={"text"} color={"#438DFC"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
                 <City name={"singapore"} info={"text"} color={"orange"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
                 <City name={"hawaii"} info={"text"} color={"pink"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
