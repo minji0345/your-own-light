@@ -67,7 +67,7 @@ function ChosenCity({name, seoul}) {
 
 
 
-function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onBaseModule,handleOrder,seoul,handleColor}) {
+function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onBaseModule,handleOrder,seoul,handleColor,colors}) {
 
 
 
@@ -112,10 +112,10 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
     function CityBlockTop() {
         return(
             <div class="city-list scroll" style={{overflowY:'scroll'}}>
-                <City name={"seoul"} info={"hihi"} color={"rgb(32,24,545)"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
-                <City name={"london"} info={"text"} color={"#438DFC"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
-                <City name={"singapore"} info={"text"} color={"orange"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
-                <City name={"hawaii"} info={"text"} color={"pink"} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
+                <City name={"seoul"} info={"hihi"} color={colors[0]} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
+                <City name={"london"} info={"text"} color={colors[1]} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
+                <City name={"Paris"} info={"text"} color={colors[2]} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
+                <City name={"Reykjavik"} info={"text"} color={colors[3]} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor}/>
             </div>
         )
     }
@@ -123,9 +123,9 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
     function CityBlockMiddle() {
         return(
             <div class="city-list scroll" style={{overflowY:'scroll'}}>
-                <City name={"Bali"} info={"hihi"} color={"deeppink"} cityHandler={(cityname)=> onMiddleModule(cityname)} handleColor = {handleColor}/>
-                <City name={"Naypiyidaw"} info={"text"} color={"lime"} cityHandler={(cityname)=> onMiddleModule(cityname)} handleColor = {handleColor}/>
-                <City name={"El Calafate"} info={"text"} color={"coral"} cityHandler={(cityname)=> onMiddleModule(cityname)} handleColor = {handleColor}/>
+                <City name={"Zagreb"} info={"hihi"} color={colors[4]} cityHandler={(cityname)=> onMiddleModule(cityname)} handleColor = {handleColor}/>
+                <City name={"Naypiyidaw"} info={"text"} color={colors[5]} cityHandler={(cityname)=> onMiddleModule(cityname)} handleColor = {handleColor}/>
+                <City name={"Singapore"} info={"text"} color={colors[6]} cityHandler={(cityname)=> onMiddleModule(cityname)} handleColor = {handleColor}/>
             </div>
         )
     }
@@ -133,10 +133,9 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
     function CityBlockBase() {
         return(
             <div class="city-list scroll" style={{overflowY:'scroll'}}>
-                <City name={"paris"} info={"hihi"} color={"gray"} cityHandler={(cityname)=> onBaseModule (cityname)} handleColor = {handleColor}/>
-                <City name={"Reykjavik"} info={"text"} color={"gray"} cityHandler={(cityname)=> onBaseModule (cityname)} handleColor = {handleColor}/>
-                <City name={"Santiago"} info={"text"} color={"gray"} cityHandler={(cityname)=> onBaseModule (cityname)} handleColor = {handleColor}/>
-                <City name={"Zagreb"} info={"text"} color={"gray"} cityHandler={(cityname)=> onBaseModule (cityname)} handleColor = {handleColor}/>
+                <City name={"El Calafate"} info={"hihi"} color={colors[6]} cityHandler={(cityname)=> onBaseModule (cityname)} handleColor = {handleColor}/>
+                <City name={"Santiago"} info={"text"} color={colors[7]} cityHandler={(cityname)=> onBaseModule (cityname)} handleColor = {handleColor}/>
+                <City name={"Bali"} info={"text"} color={colors[8]} cityHandler={(cityname)=> onBaseModule (cityname)} handleColor = {handleColor}/>
             </div>
         )
     }
@@ -166,7 +165,7 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
                         <ChosenCity name={topModule} seoul = {seoul}/>
                         <ChosenCity name={middleModule}/>
                         <ChosenCity name={baseModule}/>
-                    <div className="checkout-btn" onClick={() => handleOrder(4)}  style={{ backgroundColor : moduleType === 3 ? "#6A26ED" : "#EDEDEF" }}>complete</div>
+                    { moduleType === 3 ? <div className="checkout-btn" onClick={() => handleOrder(4)}  style={{ backgroundColor : "#6A26ED"}}>complete</div> : <div className="checkout-btn" style={{ backgroundColor : "white", color:"gray"}}>complete</div> }
             </div>
     </div>
     );

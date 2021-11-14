@@ -3,7 +3,7 @@ import './maincontexts.css';
 import { Routes, Route, Link } from "react-router-dom";
 
 
-function CheckOut({topModule,middleModule,baseModule,handleOrder,colors}) {
+function CheckOut({topModule,middleModule,baseModule,handleOrder}) {
 
 
     return(

@@ -16,7 +16,7 @@ function Main({nickname}) {
 
     const colors=["rgba(32,54,245,1)","rgba(108,164,255,1)","rgba(102,169,246,1)","rgba(133,213,211,1)","rgba(144,236,190,1)","rgba(223,243,163,1)",
     "rgba(246,157,92,1)","rgba(252,107,93,1)","rgba(90,193,116,1)","rgba(241,149,194,1)"]
-    
+
     const [contentType, setContentType] = useState(1)
     const [backColor, setBackColor] = useState('#f1f0f3')
     const [backColorOne, setBackColorOne] = useState('#f1f0f3')
@@ -78,7 +78,8 @@ function Main({nickname}) {
                 <Order 
                 topModule={topModule} onTopModule={(cityname)=>onTopModule(cityname)}
                 middleModule={middleModule} onMiddleModule={(cityname)=>onMiddleModule(cityname)} 
-                baseModule={baseModule} onBaseModule={(cityname)=>onBaseModule(cityname)} 
+                baseModule={baseModule} onBaseModule={(cityname)=>onBaseModule(cityname)}
+                colors={colors}
                 handleOrder = {handleOrder}
                 handleColor = {handleColor}
                 seoul = {seoul}
@@ -94,7 +95,6 @@ function Main({nickname}) {
                     topModule={topModule}
                     middleModule={middleModule}
                     baseModule={baseModule}
-                    colors={colors}
                     handleOrder = {handleOrder}
                     handleColor = {handleColor}
                 />
