@@ -14,7 +14,7 @@ import seoul from "./maincontexts/imgs/seoul.png";
 
 function Main({nickname}) {
 
-    const colors=["rgba(32,54,245,1)","rgba(108,164,255,1)","rgba(102,169,246,1)","rgba(133,213,211,1)","rgba(144,236,190,1)","rgba(223,243,163,1)",
+    const colors=["rgba(166,175,251,1)","rgba(108,164,255,1)","rgba(169,102,246,1)","rgba(133,213,211,1)","rgba(144,236,190,1)","rgba(223,243,163,1)",
     "rgba(246,157,92,1)","rgba(252,107,93,1)","rgba(90,193,116,1)","rgba(241,149,194,1)"]
 
     const [contentType, setContentType] = useState(1)
@@ -43,6 +43,8 @@ function Main({nickname}) {
 
     const onHome = () => {
         setBackColor('#f1f0f3');
+        setBackColorOne('#f1f0f3');
+        setBackColorTwo('#f1f0f3');
         setContentType(1);
     }
 
@@ -82,6 +84,8 @@ function Main({nickname}) {
                 colors={colors}
                 handleOrder = {handleOrder}
                 handleColor = {handleColor}
+                handleBackOne={handleBackOne}
+                handleBackTwo={handleBackTwo}
                 seoul = {seoul}
                 />
             )
@@ -104,7 +108,7 @@ function Main({nickname}) {
 
     return (
     <>
-        <div className="main" style={{background: `linear-gradient(${backColor}, ${backColor},${backColor})`}}>
+        <div className="main" style={{background: `linear-gradient(${backColor}, ${backColorOne},${backColorTwo})`}}>
             <div className="header">
                 <div className="nickname">
                     <div className="first-btn"><Link to="/nickname"><img alt='first' src={first}/></Link> Hello,{nickname}! We hope you make amazing Light.</div>
