@@ -113,7 +113,7 @@
 	width: 80vw;
 	height: 100vh;
 	border-top: solid 1px black;
-	animation-name: focus-in-expand, fade;
+	animation-name: scale-up-hor-center, fade;
     animation-duration: 1s, 1s;
     animation-delay: 0.5s, 0.5s;
     animation-fill-mode:both, both;
