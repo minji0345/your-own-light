@@ -10,7 +10,7 @@ import homelogo from "./mp4/edit.mp4";
 function Nickname({onChange}) {
 
   return(
-    <div className="main" style={{backgroundColor:"#f1f0f3"}}>
+    <div className="main nickname-back">
       <input className="nickname-input" placeholder="Enter Your Name!" onChange={onChange}></input>
       <Link className="nick-btn" to="/main">Submit</Link>
     </div>

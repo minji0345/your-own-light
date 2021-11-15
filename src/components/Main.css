@@ -172,3 +172,17 @@
 .start-btn:hover{
 	background-color: white;
 }
+
+.complete-display{
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(-45deg, #6a26ed, #8D56FF, #FFA031,#ffffff);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+.nickname-back{
+	background: linear-gradient(-45deg, #6a26ed, #8D56FF, #FFA031,#ffffff);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
