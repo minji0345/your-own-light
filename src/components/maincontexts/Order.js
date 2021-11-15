@@ -82,7 +82,7 @@ function CityMiddle({name,info,color, cityHandler, seoul,handleBackOne,handleBac
     )
 };
 
-function CityBase({name,info,color, cityHandler, seoul,handleBackTwo}) {
+function CityBase({name,info,color,cityHandler, seoul,handleBackTwo}) {
 
 
     
@@ -119,13 +119,10 @@ function CityBase({name,info,color, cityHandler, seoul,handleBackTwo}) {
 };
 
 
-function ChosenCity({name, seoul}) {
+function ChosenCity({name}) {
 
     return(
         <div className="order">
-            {/* <div className="city-module1">
-                    <img src={seoul} alt="seoul"/>
-            </div> */}
             {name}
         </div>
     )
@@ -228,7 +225,7 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
                 </div>
                 <div className="order-state">
                     <div className="progress">Your Progress</div>
-                        <ChosenCity name={topModule} seoul = {seoul}/>
+                        <ChosenCity name={topModule}/>
                         <ChosenCity name={middleModule}/>
                         <ChosenCity name={baseModule}/>
                     { moduleType === 3 ? <div className="checkout-btn" onClick={() => handleOrder(4)}  style={{ backgroundColor : "#6A26ED"}}>complete</div> : <div className="checkout-btn" style={{ backgroundColor : "#A6A6A7", color:"white"}}>complete</div> }

@@ -10,12 +10,25 @@
     }
 }
 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
 .main {
 	width: 100vw;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
-	/* background-color: #f1f0f3; */
 	align-items: center;
 	justify-content: center;
 }
@@ -100,7 +113,7 @@
 	width: 80vw;
 	height: 100vh;
 	border-top: solid 1px black;
-	animation-name: scale-up-hor-center, fade;
+	animation-name: focus-in-expand, fade;
     animation-duration: 1s, 1s;
     animation-delay: 0.5s, 0.5s;
     animation-fill-mode:both, both;

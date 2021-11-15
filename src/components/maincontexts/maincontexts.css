@@ -131,9 +131,10 @@
 	width: 50vw;
 	height: 250px;
 	border-radius: 10px;
-	padding: 2vh;
+	padding: 5px;
 	display: flex;
 	flex-direction: column;
+	padding: 2vh;
 }
 
 .city-block:hover {
