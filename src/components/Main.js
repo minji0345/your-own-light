@@ -114,7 +114,7 @@ function Main({nickname}) {
 
     return (
     <>
-        <div className="main" style={{background: `linear-gradient(-45deg,${backColor}, ${backColorOne},${backColorTwo})`}}>
+        <div className="main" style={{background: `linear-gradient(45deg,${backColor}, ${backColorOne},${backColorTwo})`}}>
             <div className="header">
                 <div className="nickname">
                     <div className="first-btn"><Link to="/nickname"><img alt='first' src={first}/></Link> Hello,{nickname}! We hope you make amazing Light.</div>
