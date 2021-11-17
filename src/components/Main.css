@@ -52,6 +52,8 @@
     animation-duration: 1s, 1s;
     animation-delay: 0.5s, 0.5s;
     animation-fill-mode:both, both;
+	letter-spacing: 0.2px;
+	font-weight: 500;
 }
 
 
@@ -60,7 +62,7 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.1rem;
+	font-size: 1.3rem;
 }
 
 .first-btn img {
@@ -81,6 +83,9 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
+	font-weight: 600;
+	letter-spacing: 0.2px;
+	font-size: 1.3rem;
 }
 
 .header-button {
@@ -89,6 +94,7 @@
 	text-align: center;
 	padding: 5px;
 	margin: 0 0.5vw 0 0.5vw;
+	border-radius: 3px;
 }
 
 .header-button:hover {
@@ -124,12 +130,15 @@
 	padding: 1vw;
 	width: 50vw;
 	border: none;
+	border-radius: 3px;
 	color: #a6a6a7;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	animation-name: focus-in-expand, fade;
     animation-duration: 1s, 1s;
     animation-delay: 0.5s, 0.5s;
     animation-fill-mode:both, both;
+	font-family: urbanist;
+	letter-spacing: 0.5px;
 }
 
 .nickname-input:focus {
@@ -142,15 +151,18 @@
 	background-color: black;
 	color: white;
 	padding: 1vw 0.5vw 1vw 0.5vw;
-	width: 8vw;
+	width: 7vw;
 	text-align: center;
 	text-decoration: none;
 	margin: 2vw;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	animation-name: focus-in-expand, fade;
     animation-duration: 1s, 1s;
     animation-delay: 0.5s, 0.5s;
     animation-fill-mode:both, both;
+	border-radius: 3px;
+	font-weight: 600;
+	letter-spacing: 1px;
 }
 
 .nick-btn:hover {
