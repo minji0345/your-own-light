@@ -258,7 +258,7 @@
 	justify-content: center;
 	align-items: center;
 	margin-top: 5vw;
-	margin-bottom: 5vw;
+	margin-bottom: 4vw;
 }
 
 .home-text {
@@ -269,8 +269,9 @@
 	align-content: center;
 	margin: auto;
 	width: 30vw;
-	font-size: 0.8rem;
+	font-size: 1rem;
 	text-align: center;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 .check-btns {
@@ -298,7 +299,7 @@
 }
 
 .motionlogo:hover {
-	cursor: pointer;
+	
 }
 
 .logoimg {
