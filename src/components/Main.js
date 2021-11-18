@@ -14,7 +14,7 @@ import seoul from "./maincontexts/imgs/seoul.png";
 
 function Main({nickname}) {
 
-    const colors=["rgba(90,107,252,1)","rgba(108,164,255,1)","rgba(169,102,246,1)","rgba(133,213,211,1)","rgba(144,236,190,1)","rgba(223,243,163,1)",
+    const colors=["rgba(108,123,246,1)","rgba(108,164,255,1)","rgba(169,102,246,1)","rgba(133,213,211,1)","rgba(144,236,190,1)","rgba(223,243,163,1)",
     "rgba(246,157,92,1)","rgba(252,107,93,1)","rgba(90,193,116,1)","rgba(241,149,194,1)"]
 
     const [contentType, setContentType] = useState(1)
