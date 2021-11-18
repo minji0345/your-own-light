@@ -1,13 +1,80 @@
-@-keyframes scale-up-hor-center{0%{-webkit-transform:scaleX(.4);transform:scaleX(.4)}100%{-webkit-transform:scaleX(1);transform:scaleX(1)}}@keyframes scale-up-hor-center{0%{-webkit-transform:scaleX(.4);transform:scaleX(.4)}100%{-webkit-transform:scaleX(1);transform:scaleX(1)}}
-@-keyframes slide-in-fwd-center{0%{-webkit-transform:translateZ(-1400px);transform:translateZ(-1400px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes slide-in-fwd-center{0%{-webkit-transform:translateZ(-1400px);transform:translateZ(-1400px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
-@-keyframes focus-in-expand{0%{letter-spacing:-.5em;-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes focus-in-expand{0%{letter-spacing:-.5em;-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}
-@keyframes fade{
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
+@-keyframes scale-up-hor-center {
+	0% {
+		-webkit-transform: scaleX(0.4);
+		transform: scaleX(0.4);
+	}
+	100% {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+	}
+}
+@keyframes scale-up-hor-center {
+	0% {
+		-webkit-transform: scaleX(0.4);
+		transform: scaleX(0.4);
+	}
+	100% {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+	}
+}
+@-keyframes slide-in-fwd-center {
+	0% {
+		-webkit-transform: translateZ(-1400px);
+		transform: translateZ(-1400px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+		opacity: 1;
+	}
+}
+@keyframes slide-in-fwd-center {
+	0% {
+		-webkit-transform: translateZ(-1400px);
+		transform: translateZ(-1400px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+		opacity: 1;
+	}
+}
+@-keyframes focus-in-expand {
+	0% {
+		letter-spacing: -0.5em;
+		-webkit-filter: blur(12px);
+		filter: blur(12px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-filter: blur(0);
+		filter: blur(0);
+		opacity: 1;
+	}
+}
+@keyframes focus-in-expand {
+	0% {
+		letter-spacing: -0.5em;
+		-webkit-filter: blur(12px);
+		filter: blur(12px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-filter: blur(0);
+		filter: blur(0);
+		opacity: 1;
+	}
+}
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 100;
+	}
 }
 
 @keyframes gradient {
@@ -21,8 +88,6 @@
 		background-position: 0% 50%;
 	}
 }
-
-
 
 .main {
 	width: 100vw;
@@ -49,11 +114,10 @@
 	line-height: 0.2vw;
 	margin: 1vw;
 	animation-name: focus-in-expand, fade;
-    animation-duration: 1s, 1s;
-    animation-delay: 0.5s, 0.5s;
-    animation-fill-mode:both, both;
+	animation-duration: 1s, 1s;
+	animation-delay: 0.5s, 0.5s;
+	animation-fill-mode: both, both;
 }
-
 
 .first-btn {
 	display: flex;
@@ -96,27 +160,26 @@
 	background-color: white;
 }
 
-.logout{
+.logout {
 	background-color: black;
 }
 
-.logout:hover{
-	background-color:#6a26ed;
+.logout:hover {
+	background-color: #6a26ed;
 }
 
-.logout a{
+.logout a {
 	color: white;
 }
-
 
 .main-context {
 	width: 80vw;
 	height: 100vh;
 	border-top: solid 1px black;
-	animation-name: scale-up-hor-center, fade;
-    animation-duration: 1s, 1s;
-    animation-delay: 0.5s, 0.5s;
-    animation-fill-mode:both, both;
+	animation-name: fade;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: both;
 }
 
 .nickname-input {
@@ -127,9 +190,9 @@
 	color: #a6a6a7;
 	font-size: 1rem;
 	animation-name: focus-in-expand, fade;
-    animation-duration: 1s, 1s;
-    animation-delay: 0.5s, 0.5s;
-    animation-fill-mode:both, both;
+	animation-duration: 1s, 1s;
+	animation-delay: 0.5s, 0.5s;
+	animation-fill-mode: both, both;
 }
 
 .nickname-input:focus {
@@ -148,9 +211,9 @@
 	margin: 2vw;
 	font-size: 1rem;
 	animation-name: focus-in-expand, fade;
-    animation-duration: 1s, 1s;
-    animation-delay: 0.5s, 0.5s;
-    animation-fill-mode:both, both;
+	animation-duration: 1s, 1s;
+	animation-delay: 0.5s, 0.5s;
+	animation-fill-mode: both, both;
 }
 
 .nick-btn:hover {
@@ -164,25 +227,25 @@
 	text-decoration: none;
 	padding: 0.5vw 1vw 0.5vw 1vw;
 	animation-name: focus-in-expand, fade;
-    animation-duration: 1s, 1s;
-    animation-delay: 2s, 2s;
-    animation-fill-mode:both, both;
+	animation-duration: 1s, 1s;
+	animation-delay: 2s, 2s;
+	animation-fill-mode: both, both;
 }
 
-.start-btn:hover{
+.start-btn:hover {
 	background-color: white;
 }
 
-.complete-display{
+.complete-display {
 	width: 100vw;
 	height: 100vh;
-	background: linear-gradient(-45deg, #6a26ed, #8D56FF, #FFA031,#ffffff);
+	background: linear-gradient(-45deg, #6a26ed, #8d56ff, #ffa031, #ffffff);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
 
-.nickname-back{
-	background: linear-gradient(-45deg, #6a26ed, #8D56FF, #FFA031,#ffffff);
+.nickname-back {
+	background: linear-gradient(-45deg, #6a26ed, #8d56ff, #ffa031, #ffffff);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
