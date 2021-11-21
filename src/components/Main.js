@@ -7,7 +7,13 @@ import Order from './maincontexts/Order';
 import CheckOut from './maincontexts/CheckOut';
 
 import first from "./maincontexts/assets/first.svg";
-import seoul from "./maincontexts/imgs/seoul.png";
+
+
+import seoul from "./maincontexts/module/seoul.png";
+import london from "./maincontexts/module/london.png";
+import paris from "./maincontexts/module/paris.png";
+import rey from "./maincontexts/module/rey.png";
+
 
 
 
@@ -16,6 +22,10 @@ function Main({nickname}) {
 
     const colors=["rgba(108,123,246,1)","rgba(108,164,255,1)","rgba(169,102,246,1)","rgba(133,213,211,1)","rgba(144,236,190,1)","rgba(223,243,163,1)",
     "rgba(246,157,92,1)","rgba(252,107,93,1)","rgba(90,193,116,1)","rgba(241,149,194,1)"]
+
+    const modules = [
+        seoul,london,paris,rey
+    ]
 
     const [contentType, setContentType] = useState(1)
     const [backColor, setBackColor] = useState('#f1f0f3')
@@ -86,7 +96,7 @@ function Main({nickname}) {
                 handleColor = {handleColor}
                 handleBackOne={handleBackOne}
                 handleBackTwo={handleBackTwo}
-                seoul = {seoul}
+                modules={modules}
                 />
             )
         } else if (contentType === 3){
@@ -100,7 +110,9 @@ function Main({nickname}) {
                     middleModule={middleModule}
                     baseModule={baseModule}
                     handleOrder = {handleOrder}
-                    handleColor = {handleColor}
+                    backColor={backColor}
+                    backColorOne={backColorOne}
+                    backColorTwo={backColorTwo}
                 />
             )
         }
@@ -114,7 +126,7 @@ function Main({nickname}) {
 
     return (
     <>
-        <div className="main" style={{background: `linear-gradient(45deg,${backColor}, ${backColorOne},${backColorTwo})`}}>
+        <div className="main" style={{ background: contentType === 4 ? 'white' : `linear-gradient(45deg,${backColor}, ${backColorOne},${backColorTwo})`}}>
             <div className="header">
                 <div className="nickname">
                     <div className="first-btn"><Link to="/nickname"><img alt='first' src={first}/></Link> Hello,{nickname}! We hope you make amazing Light.</div>

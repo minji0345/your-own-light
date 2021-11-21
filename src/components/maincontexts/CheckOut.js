@@ -3,13 +3,13 @@ import './maincontexts.css';
 import { Routes, Route, Link } from "react-router-dom";
 
 
-function CheckOut({topModule,middleModule,baseModule,handleOrder}) {
+function CheckOut({topModule,middleModule,baseModule,handleOrder,backColor,backColorOne,backColorTwo}) {
 
 
     return(
         <div className="checkout-display" >
             <div className="checkout-main">
-                <div className="checkout-info check-module">
+                <div className="checkout-info check-module" style={{background: `linear-gradient(45deg,${backColor}, ${backColorOne},${backColorTwo})`}}>
                         <div>
                             {topModule}
                         </div>

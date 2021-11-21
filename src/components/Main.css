@@ -162,7 +162,7 @@
     animation-fill-mode:both, both;
 	border-radius: 3px;
 	font-weight: 600;
-	letter-spacing: 1px;
+	letter-spacing:0.2px;
 }
 
 .nick-btn:hover {
@@ -179,6 +179,7 @@
     animation-duration: 1s, 1s;
     animation-delay: 2s, 2s;
     animation-fill-mode:both, both;
+	border-radius: 3px;
 }
 
 .start-btn:hover{

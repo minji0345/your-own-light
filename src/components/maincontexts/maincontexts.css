@@ -50,6 +50,13 @@
 
 .status {
 	margin: 0 1vw 0 1vw;
+	font-family: 'urbanist';
+	font-weight: 600;
+	font-size: 1.2rem;
+}
+
+.status:hover {
+	cursor: pointer;
 }
 
 .prev-button {
@@ -145,6 +152,9 @@
 
 .city-name {
 	height: 30px;
+	font-weight: 600;
+	letter-spacing: 0.2px;
+	font-size: 1.2rem;
 }
 
 .city-info {
@@ -214,6 +224,7 @@
 	background-color: #ededef;
 	top: -0.8vw;
 	margin-right: 1vw;
+	font-weight: 500;
 }
 
 .choose-btn:hover {

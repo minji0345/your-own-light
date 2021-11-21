@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './maincontexts.css';
 import back from './assets/back.svg'
-import nxt1 from './assets/nxt1.svg'
-import nxt2 from './assets/nxt2.svg'
+import nxt from './assets/nxt.svg'
 
 
 
 
-function CityTop({name,info,color, cityHandler, seoul,handleColor,handleBackOne,handleBackTwo}) {
+
+function CityTop({name,info,color, cityHandler,city,handleColor,handleBackOne,handleBackTwo}) {
 
 
     
@@ -26,7 +26,7 @@ function CityTop({name,info,color, cityHandler, seoul,handleColor,handleBackOne,
             </div>
             <div className="city-info">
                 <div className="city-module">
-                    <img src={seoul} alt="seoul"/>
+                    <img src={city} alt="seoul"/>
                 </div>
                 <div className="city-description">
                         <div className="city-color" style={{backgroundColor: color }}>
@@ -112,7 +112,7 @@ function CityBase({name,info,color,cityHandler, seoul,handleBackTwo}) {
             </div>
             <div className="city-choose">
                 <div ></div>
-                <div className="choose-btn" onClick={() => clickHandler(name,color)}>choose</div>
+                <div className="choose-btn" onClick={() => clickHandler(name,color)}>Choose</div>
             </div>
         </div>
     )
@@ -130,7 +130,7 @@ function ChosenCity({name}) {
 
 
 
-function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onBaseModule,handleOrder,seoul,handleColor,handleBackOne,handleBackTwo,colors}) {
+function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onBaseModule,handleOrder,handleColor,handleBackOne,handleBackTwo,colors,modules}) {
 
 
 
@@ -175,10 +175,10 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
     function CityBlockTop() {
         return(
             <div class="city-list scroll" style={{overflowY:'scroll'}}>
-                <CityTop name={"seoul"} info={"hihi"} color={colors[0]} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
-                <CityTop name={"london"} info={"text"} color={colors[1]} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
-                <CityTop name={"Paris"} info={"text"} color={colors[2]} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
-                <CityTop name={"Reykjavik"} info={"text"} color={colors[3]} cityHandler={(cityname)=> onTopModule(cityname)} seoul = {seoul} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
+                <CityTop name={"Seoul"} info={"hihi"} color={colors[0]} cityHandler={(cityname)=> onTopModule(cityname)} city = {modules[0]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
+                <CityTop name={"London"} info={"text"} color={colors[1]} cityHandler={(cityname)=> onTopModule(cityname)} city = {modules[1]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
+                <CityTop name={"Paris"} info={"text"} color={colors[2]} cityHandler={(cityname)=> onTopModule(cityname)} city = {modules[2]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
+                <CityTop name={"Reykjavik"} info={"text"} color={colors[3]} cityHandler={(cityname)=> onTopModule(cityname)} city = {modules[3]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
             </div>
         )
     }
@@ -212,14 +212,14 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
                             <img src={back} alt='back'/>
                         </div> : <div className="prev-button1"></div> }
                         <div className="status-list">
-                            <div className="status" style={{color: moduleType === 1 ? "#6A26ED" : '#000000' }}> 1.top</div>
-                            <div className="status" style={{color: moduleType === 2 ? "#6A26ED" : '#000000' }}>2.middle</div>
-                            <div className="status" style={{color: moduleType === 3 ? "#6A26ED" : '#000000' }}> 3.base</div>
+                            <div className="status" style={{color: moduleType === 1 ? "#6A26ED" : '#000000' }} onClick={()=>setModuleType(1)}> 1.top</div>
+                            <div className="status" style={{color: moduleType === 2 ? "#6A26ED" : '#000000' }} onClick={()=>setModuleType(2)}>2.middle</div>
+                            <div className="status" style={{color: moduleType === 3 ? "#6A26ED" : '#000000' }} onClick={()=>setModuleType(3)}> 3.base</div>
                         </div>
                         { moduleType !== 1 ? 
                         <div className="next-button" onClick={nextHandler}>
-                            <img src={nxt1} alt='back'/>
-                        </div> : <div className="next-button" onClick={nextHandler}> <img src={nxt1} alt='back'/></div> }
+                            <img src={nxt} alt='back'/>
+                        </div> : <div className="next-button" onClick={nextHandler}> <img src={nxt} alt='back'/></div> }
                     </div>
                     <div>{moduleHandler()}</div>
                 </div>
