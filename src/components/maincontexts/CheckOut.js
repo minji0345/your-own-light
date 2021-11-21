@@ -10,15 +10,13 @@ function CheckOut({topModule,middleModule,baseModule,handleOrder,backColor,backC
         <div className="checkout-display" >
             <div className="checkout-main">
                 <div className="checkout-info check-module" style={{background: `linear-gradient(45deg,${backColor}, ${backColorOne},${backColorTwo})`}}>
-                        <div>
-                            {topModule}
-                        </div>
-                        <div>
-                            {middleModule}
-                        </div>
-                        <div>
-                            {baseModule}
-                        </div>
+                     
+                            { topModule.city ? <img src={topModule.city} alt="cityimg" style={{marginBottom:"190px" ,zIndex:"100"}}/> : null}
+                      
+                            {middleModule.city ? <img src={middleModule.city} alt="cityimg"  style={{zIndex:"15"}}/> : null}
+                        
+                            { baseModule.city ? <img src={baseModule.city} alt="cityimg" style={{marginTop:"250px",zIndex:"10"}} /> : null}
+            
                 </div>
                 <div className="checkout-info" >
                     This is yout light

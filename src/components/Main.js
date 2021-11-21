@@ -14,6 +14,13 @@ import london from "./maincontexts/module/london.png";
 import paris from "./maincontexts/module/paris.png";
 import rey from "./maincontexts/module/rey.png";
 
+import zag from "./maincontexts/module/zagreb.png";
+import nay from "./maincontexts/module/nay.png";
+import singapore from "./maincontexts/module/singapore.png";
+
+import el from "./maincontexts/module/el.png";
+import santiago from "./maincontexts/module/santiago.png";
+import bali from "./maincontexts/module/bali.png";
 
 
 
@@ -24,7 +31,7 @@ function Main({nickname}) {
     "rgba(246,157,92,1)","rgba(252,107,93,1)","rgba(90,193,116,1)","rgba(241,149,194,1)"]
 
     const modules = [
-        seoul,london,paris,rey
+        seoul,london,paris,rey,zag,nay,singapore,el,santiago,bali
     ]
 
     const [contentType, setContentType] = useState(1)
@@ -62,21 +69,43 @@ function Main({nickname}) {
 
 
      /*------------order-state 관리 함수  -------- */
-        const [topModule,setTopModule] = useState('top');
-        const [middleModule,setMiddleModule] = useState('middle');
-        const [baseModule,setBaseModule] = useState('base');
+        const [topModule,setTopModule] = useState({
+            name: 'top',
+            city: ''
+          });
+        
+        const [middleModule,setMiddleModule] = useState({
+            name: 'middle',
+            city: ''
+          });
+        const [baseModule,setBaseModule] = useState({
+            name: 'base',
+            city: ''
+          });
 
 
-        const onTopModule = (cityname) =>{
-            setTopModule(cityname);
+        const onTopModule = (cityname,cityimg) =>{
+            setTopModule({
+                ...topModule, // 기존의 input 객체를 복사한 뒤
+                name: cityname,
+                city: cityimg // name 키를 가진 값을 value 로 설정
+              });
         }
 
-        const onMiddleModule = (cityname) =>{
-            setMiddleModule(cityname);
+        const onMiddleModule = (cityname,cityimg) =>{
+            setMiddleModule({
+                ...middleModule, // 기존의 input 객체를 복사한 뒤
+                name: cityname,
+                city: cityimg // name 키를 가진 값을 value 로 설정
+              });
         }
 
-        const onBaseModule = (cityname) =>{
-            setBaseModule(cityname);
+        const onBaseModule = (cityname,cityimg) =>{
+            setBaseModule({
+                ...baseModule, // 기존의 input 객체를 복사한 뒤
+                name: cityname,
+                city: cityimg // name 키를 가진 값을 value 로 설정
+              });
         }
 
 
@@ -88,9 +117,9 @@ function Main({nickname}) {
         } else if (contentType === 2){
             return(
                 <Order 
-                topModule={topModule} onTopModule={(cityname)=>onTopModule(cityname)}
-                middleModule={middleModule} onMiddleModule={(cityname)=>onMiddleModule(cityname)} 
-                baseModule={baseModule} onBaseModule={(cityname)=>onBaseModule(cityname)}
+                topModule={topModule} onTopModule={(cityname,cityimg)=>onTopModule(cityname,cityimg)}
+                middleModule={middleModule} onMiddleModule={(cityname,cityimg)=>onMiddleModule(cityname,cityimg)} 
+                baseModule={baseModule} onBaseModule={(cityname,cityimg)=>onBaseModule(cityname,cityimg)}
                 colors={colors}
                 handleOrder = {handleOrder}
                 handleColor = {handleColor}
@@ -144,7 +173,7 @@ function Main({nickname}) {
         </div>
     </>
     );
-};
+}
 
 
 export default Main;

@@ -204,6 +204,16 @@
 	justify-content: center;
 	align-items: center;
 	transition: all 1s ease;
+	position: relative;
+}
+
+.order img{
+	width: 9vw;
+}
+
+.module-name{
+	position: relative;
+	z-index: 5;
 }
 
 .city-choose {
@@ -332,14 +342,11 @@
 	justify-content: center;
 }
 
-.check-module {
+.check-module img{
+	width: 12vw;
+	position: absolute;
 }
 
-.city-module1 img {
-	width: 7vw;
-	height: 7vw;
-	position: relative;
-}
 
 .p5-back {
 	position: absolute;

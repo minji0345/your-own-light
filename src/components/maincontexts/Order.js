@@ -7,14 +7,52 @@ import nxt from './assets/nxt.svg'
 
 
 
-function CityTop({name,info,color, cityHandler,city,handleColor,handleBackOne,handleBackTwo}) {
+function CityTop({name,info,color,cityHandler,city,handleColor,handleBackOne,handleBackTwo}) {
+
+
+    
+    
+    const clickHandler = (name,color,city) => {
+        handleColor(color);
+        cityHandler(name,city);
+        handleBackOne(color);
+        handleBackTwo(color);
+        console.log(city);
+    }
+
+    return(
+        <div className="city-block">
+            <div className="city-name">
+                {name}
+            </div>
+            <div className="city-info">
+                <div className="city-module">
+                    <img src={city} alt="seoul"/>
+                </div>
+                <div className="city-description">
+                        <div className="city-color" style={{backgroundColor: color }}>
+
+                        </div>
+                </div>
+            </div>
+            <div>
+                city information
+            </div>
+            <div className="city-choose">
+                <div ></div>
+                <div className="choose-btn" onClick={() => clickHandler(name,color,city)}>choose</div>
+            </div>
+        </div>
+    )
+};
+
+function CityMiddle({name,info,color, cityHandler,city,handleBackOne,handleBackTwo}) {
 
 
     
     
     const clickHandler = (name,color) => {
-        handleColor(color);
-        cityHandler(name);
+        cityHandler(name,city);
         handleBackOne(color);
         handleBackTwo(color);
     }
@@ -39,20 +77,19 @@ function CityTop({name,info,color, cityHandler,city,handleColor,handleBackOne,ha
             </div>
             <div className="city-choose">
                 <div ></div>
-                <div className="choose-btn" onClick={() => clickHandler(name,color)}>choose</div>
+                <div className="choose-btn" onClick={() => clickHandler(name,color,city)}>choose</div>
             </div>
         </div>
     )
 };
 
-function CityMiddle({name,info,color, cityHandler, seoul,handleBackOne,handleBackTwo}) {
+function CityBase({name,info,color,cityHandler,city,handleBackTwo}) {
 
 
     
     
     const clickHandler = (name,color) => {
-        cityHandler(name);
-        handleBackOne(color);
+        cityHandler(name,city);
         handleBackTwo(color);
     }
 
@@ -63,7 +100,7 @@ function CityMiddle({name,info,color, cityHandler, seoul,handleBackOne,handleBac
             </div>
             <div className="city-info">
                 <div className="city-module">
-                    <img src={seoul} alt="seoul"/>
+                    <img src={city} alt="seoul"/>
                 </div>
                 <div className="city-description">
                         <div className="city-color" style={{backgroundColor: color }}>
@@ -76,54 +113,20 @@ function CityMiddle({name,info,color, cityHandler, seoul,handleBackOne,handleBac
             </div>
             <div className="city-choose">
                 <div ></div>
-                <div className="choose-btn" onClick={() => clickHandler(name,color)}>choose</div>
-            </div>
-        </div>
-    )
-};
-
-function CityBase({name,info,color,cityHandler, seoul,handleBackTwo}) {
-
-
-    
-    
-    const clickHandler = (name,color) => {
-        cityHandler(name);
-        handleBackTwo(color);
-    }
-
-    return(
-        <div className="city-block">
-            <div className="city-name">
-                {name}
-            </div>
-            <div className="city-info">
-                <div className="city-module">
-                    <img src={seoul} alt="seoul"/>
-                </div>
-                <div className="city-description">
-                        <div className="city-color" style={{backgroundColor: color }}>
-
-                        </div>
-                </div>
-            </div>
-            <div>
-                city information
-            </div>
-            <div className="city-choose">
-                <div ></div>
-                <div className="choose-btn" onClick={() => clickHandler(name,color)}>Choose</div>
+                <div className="choose-btn" onClick={() => clickHandler(name,color,city)}>Choose</div>
             </div>
         </div>
     )
 };
 
 
-function ChosenCity({name}) {
-
+function ChosenCity({module}) {
     return(
-        <div className="order">
-            {name}
+        <div className="order" style={{position:"relative"}}>
+            <div className="module-name"  style={{position:"absolute"}}>
+                {module.name}
+            </div>
+            { module.city ? <img src={module.city} alt="cityimg" style={{position:"absolute"}} /> : null}
         </div>
     )
 };
@@ -175,10 +178,10 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
     function CityBlockTop() {
         return(
             <div class="city-list scroll" style={{overflowY:'scroll'}}>
-                <CityTop name={"Seoul"} info={"hihi"} color={colors[0]} cityHandler={(cityname)=> onTopModule(cityname)} city = {modules[0]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
-                <CityTop name={"London"} info={"text"} color={colors[1]} cityHandler={(cityname)=> onTopModule(cityname)} city = {modules[1]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
-                <CityTop name={"Paris"} info={"text"} color={colors[2]} cityHandler={(cityname)=> onTopModule(cityname)} city = {modules[2]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
-                <CityTop name={"Reykjavik"} info={"text"} color={colors[3]} cityHandler={(cityname)=> onTopModule(cityname)} city = {modules[3]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
+                <CityTop name={"Seoul"} info={"hihi"} color={colors[0]} cityHandler={(cityname,cityimg)=> onTopModule(cityname,cityimg)} city = {modules[0]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
+                <CityTop name={"London"} info={"text"} color={colors[1]} cityHandler={(cityname,cityimg)=> onTopModule(cityname,cityimg)} city = {modules[1]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
+                <CityTop name={"Paris"} info={"text"} color={colors[2]} cityHandler={(cityname,cityimg)=> onTopModule(cityname,cityimg)} city = {modules[2]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
+                <CityTop name={"Reykjavik"} info={"text"} color={colors[3]} cityHandler={(cityname,cityimg)=> onTopModule(cityname,cityimg)} city = {modules[3]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
             </div>
         )
     }
@@ -186,9 +189,9 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
     function CityBlockMiddle() {
         return(
             <div class="city-list scroll" style={{overflowY:'scroll'}}>
-                <CityMiddle name={"Zagreb"} info={"hihi"} color={colors[4]} cityHandler={(cityname)=> onMiddleModule(cityname)}  handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
-                <CityMiddle name={"Naypiyidaw"} info={"text"} color={colors[5]} cityHandler={(cityname)=> onMiddleModule(cityname)}  handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
-                <CityMiddle name={"Singapore"} info={"text"} color={colors[6]} cityHandler={(cityname)=> onMiddleModule(cityname)}  handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
+                <CityMiddle name={"Zagreb"} info={"hihi"} color={colors[4]} cityHandler={(cityname,cityimg)=> onMiddleModule(cityname,cityimg)}  city = {modules[4]} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
+                <CityMiddle name={"Naypiyidaw"} info={"text"} color={colors[5]} cityHandler={(cityname,cityimg)=> onMiddleModule(cityname,cityimg)}  city = {modules[5]} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
+                <CityMiddle name={"Singapore"} info={"text"} color={colors[6]} cityHandler={(cityname,cityimg)=> onMiddleModule(cityname,cityimg)}  city = {modules[6]} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo}/>
             </div>
         )
     }
@@ -196,9 +199,9 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
     function CityBlockBase() {
         return(
             <div class="city-list scroll" style={{overflowY:'scroll'}}>
-                <CityBase name={"El Calafate"} info={"hihi"} color={colors[6]} cityHandler={(cityname)=> onBaseModule (cityname)}  handleBackTwo={handleBackTwo}/>
-                <CityBase name={"Santiago"} info={"text"} color={colors[7]} cityHandler={(cityname)=> onBaseModule (cityname)}  handleBackTwo={handleBackTwo}/>
-                <CityBase name={"Bali"} info={"text"} color={colors[8]} cityHandler={(cityname)=> onBaseModule (cityname)} handleBackTwo={handleBackTwo}/>
+                <CityBase name={"El Calafate"} info={"hihi"} color={colors[6]} cityHandler={(cityname,cityimg)=> onBaseModule (cityname,cityimg)} city = {modules[7]} handleBackTwo={handleBackTwo}/>
+                <CityBase name={"Santiago"} info={"text"} color={colors[7]} cityHandler={(cityname,cityimg)=> onBaseModule (cityname,cityimg)}  city = {modules[8]} handleBackTwo={handleBackTwo}/>
+                <CityBase name={"Bali"} info={"text"} color={colors[8]} cityHandler={(cityname,cityimg)=> onBaseModule (cityname,cityimg)} city = {modules[9]} handleBackTwo={handleBackTwo}/>
             </div>
         )
     }
@@ -225,9 +228,9 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
                 </div>
                 <div className="order-state">
                     <div className="progress">Your Progress</div>
-                        <ChosenCity name={topModule}/>
-                        <ChosenCity name={middleModule}/>
-                        <ChosenCity name={baseModule}/>
+                        <ChosenCity module={topModule} />
+                        <ChosenCity module={middleModule}/>
+                        <ChosenCity module={baseModule}/>
                     { moduleType === 3 ? <div className="checkout-btn" onClick={() => handleOrder(4)}  style={{ backgroundColor : "#6A26ED"}}>complete</div> : <div className="checkout-btn" style={{ backgroundColor : "#A6A6A7", color:"white"}}>complete</div> }
             </div>
     </div>
