@@ -23,7 +23,9 @@ function Home() {
         <div>
             <div className="main-home">
                 <img src={logo} alt="logo" width="20%" className="logoimg"/>
-                <video className="motionlogo" width="30%" ref={vidRef} muted loop  onMouseEnter={playHandler} onMouseLeave={pauseHandler}>
+                <video className="motionlogo" width="30%" muted loop autoPlay 
+                // ref={vidRef} onMouseEnter={playHandler} onMouseLeave={pauseHandler}
+                >
                     <source src={motionlogo} type='video/mp4' />
                 </video>
             </div>

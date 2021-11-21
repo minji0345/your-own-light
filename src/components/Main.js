@@ -63,6 +63,29 @@ function Main({nickname}) {
         setBackColorOne('#f1f0f3');
         setBackColorTwo('#f1f0f3');
         setContentType(1);
+        onTopModule('Top','','');
+        onMiddleModule('Top','','');
+        onBaseModule('Top','','');
+    }
+
+    const onOrder = () => {
+        setBackColor('#f1f0f3');
+        setBackColorOne('#f1f0f3');
+        setBackColorTwo('#f1f0f3');
+        setContentType(2);
+        onTopModule('Top','','');
+        onMiddleModule('Top','','');
+        onBaseModule('Top','','');
+    }
+
+    const onAbout = () => {
+        setBackColor('#f1f0f3');
+        setBackColorOne('#f1f0f3');
+        setBackColorTwo('#f1f0f3');
+        setContentType(3);
+        onTopModule('Top','','');
+        onMiddleModule('Top','','');
+        onBaseModule('Top','','');
     }
 
 
@@ -70,41 +93,47 @@ function Main({nickname}) {
 
      /*------------order-state 관리 함수  -------- */
         const [topModule,setTopModule] = useState({
-            name: 'top',
-            city: ''
+            name: 'Top',
+            city: '',
+            color:''
           });
         
         const [middleModule,setMiddleModule] = useState({
-            name: 'middle',
-            city: ''
+            name: 'Middle',
+            city: '',
+            color:''
           });
         const [baseModule,setBaseModule] = useState({
-            name: 'base',
-            city: ''
+            name: 'Base',
+            city: '',
+            color:''
           });
 
 
-        const onTopModule = (cityname,cityimg) =>{
+        const onTopModule = (cityname,cityimg,citycolor) =>{
             setTopModule({
                 ...topModule, // 기존의 input 객체를 복사한 뒤
                 name: cityname,
-                city: cityimg // name 키를 가진 값을 value 로 설정
+                city: cityimg,
+                color:citycolor // name 키를 가진 값을 value 로 설정
               });
         }
 
-        const onMiddleModule = (cityname,cityimg) =>{
+        const onMiddleModule = (cityname,cityimg,citycolor) =>{
             setMiddleModule({
                 ...middleModule, // 기존의 input 객체를 복사한 뒤
                 name: cityname,
-                city: cityimg // name 키를 가진 값을 value 로 설정
+                city: cityimg,
+                color:citycolor // name 키를 가진 값을 value 로 설정
               });
         }
 
-        const onBaseModule = (cityname,cityimg) =>{
+        const onBaseModule = (cityname,cityimg,citycolor) =>{
             setBaseModule({
                 ...baseModule, // 기존의 input 객체를 복사한 뒤
                 name: cityname,
-                city: cityimg // name 키를 가진 값을 value 로 설정
+                city: cityimg,
+                color:citycolor // name 키를 가진 값을 value 로 설정
               });
         }
 
@@ -117,9 +146,9 @@ function Main({nickname}) {
         } else if (contentType === 2){
             return(
                 <Order 
-                topModule={topModule} onTopModule={(cityname,cityimg)=>onTopModule(cityname,cityimg)}
-                middleModule={middleModule} onMiddleModule={(cityname,cityimg)=>onMiddleModule(cityname,cityimg)} 
-                baseModule={baseModule} onBaseModule={(cityname,cityimg)=>onBaseModule(cityname,cityimg)}
+                topModule={topModule} onTopModule={(cityname,cityimg,citycolor)=>onTopModule(cityname,cityimg,citycolor)}
+                middleModule={middleModule} onMiddleModule={(cityname,cityimg,citycolor)=>onMiddleModule(cityname,cityimg,citycolor)} 
+                baseModule={baseModule} onBaseModule={(cityname,cityimg,citycolor)=>onBaseModule(cityname,cityimg,citycolor)}
                 colors={colors}
                 handleOrder = {handleOrder}
                 handleColor = {handleColor}
@@ -162,8 +191,8 @@ function Main({nickname}) {
                 </div>
                 <div className="header-nav">
                     <div className="header-button" onClick={() => onHome()} style={{color: contentType === 1 ? "#6A26ED" : '#000000' }}>Home</div>
-                    <div className="header-button" onClick={() => setContentType(2)} style={{color: contentType === 2 ? "#6A26ED" : '#000000' }}>Order</div>
-                    <div className="header-button" onClick={() => setContentType(3)} style={{color: contentType === 3 ? "#6A26ED" : '#000000' }}>About</div>
+                    <div className="header-button" onClick={() => onOrder()} style={{color: contentType === 2 ? "#6A26ED" : '#000000' }}>Order</div>
+                    <div className="header-button" onClick={() => onAbout()} style={{color: contentType === 3 ? "#6A26ED" : '#000000' }}>About</div>
                     <div className="header-button logout"><Link style={{textDecoration:'none'}}to="/">LOGOUT</Link></div>
                 </div>
             </div>
