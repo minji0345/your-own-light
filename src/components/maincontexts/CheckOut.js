@@ -15,7 +15,7 @@ function CheckOut({topModule,middleModule,baseModule,handleOrder,backColor,backC
                       
                             {middleModule.city ? <img src={middleModule.city} alt="cityimg"  style={{zIndex:"15"}}/> : null}
                         
-                            { baseModule.city ? <img src={baseModule.city} alt="cityimg" style={{marginTop:"250px",zIndex:"10"}} /> : null}
+                            { baseModule.city ? <img src={baseModule.city} alt="cityimg" style={{marginTop:"270px",zIndex:"10"}} /> : null}
             
                 </div>
                 <div className="checkout-info" >
