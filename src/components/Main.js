@@ -7,7 +7,20 @@ import Order from './maincontexts/Order';
 import CheckOut from './maincontexts/CheckOut';
 
 import first from "./maincontexts/assets/first.svg";
-import seoul from "./maincontexts/imgs/seoul.png";
+
+
+import seoul from "./maincontexts/module/seoul.png";
+import london from "./maincontexts/module/london.png";
+import paris from "./maincontexts/module/paris.png";
+import rey from "./maincontexts/module/rey.png";
+
+import zag from "./maincontexts/module/zagreb.png";
+import nay from "./maincontexts/module/nay.png";
+import singapore from "./maincontexts/module/singapore.png";
+
+import el from "./maincontexts/module/el.png";
+import santiago from "./maincontexts/module/santiago.png";
+import bali from "./maincontexts/module/bali.png";
 
 
 
@@ -16,6 +29,10 @@ function Main({nickname}) {
 
     const colors=["rgba(108,123,246,1)","rgba(108,164,255,1)","rgba(169,102,246,1)","rgba(133,213,211,1)","rgba(144,236,190,1)","rgba(223,243,163,1)",
     "rgba(246,157,92,1)","rgba(252,107,93,1)","rgba(90,193,116,1)","rgba(241,149,194,1)"]
+
+    const modules = [
+        seoul,london,paris,rey,zag,nay,singapore,el,santiago,bali
+    ]
 
     const [contentType, setContentType] = useState(1)
     const [backColor, setBackColor] = useState('#f1f0f3')
@@ -46,27 +63,78 @@ function Main({nickname}) {
         setBackColorOne('#f1f0f3');
         setBackColorTwo('#f1f0f3');
         setContentType(1);
+        onTopModule('Top','','');
+        onMiddleModule('Middle','','');
+        onBaseModule('Base','','');
+    }
+
+    const onOrder = () => {
+        setBackColor('#f1f0f3');
+        setBackColorOne('#f1f0f3');
+        setBackColorTwo('#f1f0f3');
+        setContentType(2);
+        onTopModule('Top','','');
+        onMiddleModule('Middle','','');
+        onBaseModule('Base','','');
+    }
+
+    const onAbout = () => {
+        setBackColor('#f1f0f3');
+        setBackColorOne('#f1f0f3');
+        setBackColorTwo('#f1f0f3');
+        setContentType(3);
+        onTopModule('Top','','');
+        onMiddleModule('Middle','','');
+        onBaseModule('Base','','');
     }
 
 
 
 
      /*------------order-state 관리 함수  -------- */
-        const [topModule,setTopModule] = useState('top');
-        const [middleModule,setMiddleModule] = useState('middle');
-        const [baseModule,setBaseModule] = useState('base');
+        const [topModule,setTopModule] = useState({
+            name: 'Top',
+            city: '',
+            color:''
+          });
+        
+        const [middleModule,setMiddleModule] = useState({
+            name: 'Middle',
+            city: '',
+            color:''
+          });
+        const [baseModule,setBaseModule] = useState({
+            name: 'Base',
+            city: '',
+            color:''
+          });
 
 
-        const onTopModule = (cityname) =>{
-            setTopModule(cityname);
+        const onTopModule = (cityname,cityimg,citycolor) =>{
+            setTopModule({
+                ...topModule, // 기존의 input 객체를 복사한 뒤
+                name: cityname,
+                city: cityimg,
+                color:citycolor // name 키를 가진 값을 value 로 설정
+              });
         }
 
-        const onMiddleModule = (cityname) =>{
-            setMiddleModule(cityname);
+        const onMiddleModule = (cityname,cityimg,citycolor) =>{
+            setMiddleModule({
+                ...middleModule, // 기존의 input 객체를 복사한 뒤
+                name: cityname,
+                city: cityimg,
+                color:citycolor // name 키를 가진 값을 value 로 설정
+              });
         }
 
-        const onBaseModule = (cityname) =>{
-            setBaseModule(cityname);
+        const onBaseModule = (cityname,cityimg,citycolor) =>{
+            setBaseModule({
+                ...baseModule, // 기존의 input 객체를 복사한 뒤
+                name: cityname,
+                city: cityimg,
+                color:citycolor // name 키를 가진 값을 value 로 설정
+              });
         }
 
 
@@ -78,15 +146,15 @@ function Main({nickname}) {
         } else if (contentType === 2){
             return(
                 <Order 
-                topModule={topModule} onTopModule={(cityname)=>onTopModule(cityname)}
-                middleModule={middleModule} onMiddleModule={(cityname)=>onMiddleModule(cityname)} 
-                baseModule={baseModule} onBaseModule={(cityname)=>onBaseModule(cityname)}
+                topModule={topModule} onTopModule={(cityname,cityimg,citycolor)=>onTopModule(cityname,cityimg,citycolor)}
+                middleModule={middleModule} onMiddleModule={(cityname,cityimg,citycolor)=>onMiddleModule(cityname,cityimg,citycolor)} 
+                baseModule={baseModule} onBaseModule={(cityname,cityimg,citycolor)=>onBaseModule(cityname,cityimg,citycolor)}
                 colors={colors}
                 handleOrder = {handleOrder}
                 handleColor = {handleColor}
                 handleBackOne={handleBackOne}
                 handleBackTwo={handleBackTwo}
-                seoul = {seoul}
+                modules={modules}
                 />
             )
         } else if (contentType === 3){
@@ -100,7 +168,9 @@ function Main({nickname}) {
                     middleModule={middleModule}
                     baseModule={baseModule}
                     handleOrder = {handleOrder}
-                    handleColor = {handleColor}
+                    backColor={backColor}
+                    backColorOne={backColorOne}
+                    backColorTwo={backColorTwo}
                 />
             )
         }
@@ -114,15 +184,15 @@ function Main({nickname}) {
 
     return (
     <>
-        <div className="main" style={{background: `linear-gradient(45deg,${backColor}, ${backColorOne},${backColorTwo})`}}>
+        <div className="main" style={{ background: contentType === 4 ? 'white' : `linear-gradient(45deg,${backColor}, ${backColorOne},${backColorTwo})`}}>
             <div className="header">
                 <div className="nickname">
                     <div className="first-btn"><Link to="/nickname"><img alt='first' src={first}/></Link> Hello,{nickname}! We hope you make amazing Light.</div>
                 </div>
                 <div className="header-nav">
                     <div className="header-button" onClick={() => onHome()} style={{color: contentType === 1 ? "#6A26ED" : '#000000' }}>Home</div>
-                    <div className="header-button" onClick={() => setContentType(2)} style={{color: contentType === 2 ? "#6A26ED" : '#000000' }}>Order</div>
-                    <div className="header-button" onClick={() => setContentType(3)} style={{color: contentType === 3 ? "#6A26ED" : '#000000' }}>About</div>
+                    <div className="header-button" onClick={() => onOrder()} style={{color: contentType === 2 ? "#6A26ED" : '#000000' }}>Order</div>
+                    <div className="header-button" onClick={() => onAbout()} style={{color: contentType === 3 ? "#6A26ED" : '#000000' }}>About</div>
                     <div className="header-button logout"><Link style={{textDecoration:'none'}}to="/">LOGOUT</Link></div>
                 </div>
             </div>
@@ -132,7 +202,7 @@ function Main({nickname}) {
         </div>
     </>
     );
-};
+}
 
 
 export default Main;
