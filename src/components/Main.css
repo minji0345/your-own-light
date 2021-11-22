@@ -248,6 +248,10 @@
 
 .start-btn:hover {
 	background-color: white;
+	cursor: pointer;
+	transform: translateY(-3px);
+	transition: all ease 0.2s 0s;
+	box-shadow: 0px 5px 10px 1px rgb(106, 38, 237, 0.1);
 }
 
 .complete-display {
