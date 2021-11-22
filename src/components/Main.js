@@ -5,6 +5,7 @@ import About from './maincontexts/About';
 import Home from './maincontexts/Home';
 import Order from './maincontexts/Order';
 import CheckOut from './maincontexts/CheckOut';
+import Sketch from './p5comps/Sketch';
 
 import first from "./maincontexts/assets/first.svg";
 

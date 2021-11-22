@@ -12,7 +12,9 @@ export default class App extends Component {
     }
 
     draw = p5 => {
-        p5.background(p5.mouseX,p5.mouseY,120)
+        p5.background(200,200,200)
+        p5.fill(0,0,0)
+        p5.ellipse(p5.mouseX,p5.mouseY,300,300)
     }
 
     render() {
