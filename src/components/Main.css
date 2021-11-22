@@ -42,19 +42,7 @@
 		opacity: 1;
 	}
 }
-@-keyframes focus-in-expand {
-	0% {
-		letter-spacing: -0.5em;
-		-webkit-filter: blur(12px);
-		filter: blur(12px);
-		opacity: 0;
-	}
-	100% {
-		-webkit-filter: blur(0);
-		filter: blur(0);
-		opacity: 1;
-	}
-}
+
 @keyframes focus-in-expand {
 	0% {
 		letter-spacing: -0.5em;
@@ -89,6 +77,32 @@
 	}
 }
 
+@keyframes slide-in-fwd-top {
+	0% {
+		-webkit-transform: translateZ(-1400px) translateY(-800px);
+		transform: translateZ(-1400px) translateY(-800px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateZ(0) translateY(0);
+		transform: translateZ(0) translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slide-in-bottom {
+	0% {
+		-webkit-transform: translateY(2000px);
+		transform: translateY(2000px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
 .main {
 	width: 100vw;
 	height: 100vh;
@@ -117,7 +131,6 @@
 	animation-duration: 1s, 1s;
 	animation-delay: 0.5s, 0.5s;
 	animation-fill-mode: both, both;
-	letter-spacing: 0.2px;
 	font-weight: 500;
 }
 
@@ -182,6 +195,9 @@
 .main-context {
 	width: 80vw;
 	height: 100vh;
+	/* display: flex;
+	align-items: center;
+	justify-content: center; */
 	border-top: solid 1px black;
 	animation-name: scale-up-hor-center, fade;
 	animation-duration: 1s, 0.8s;
@@ -274,6 +290,13 @@
 	animation: gradient 15s ease infinite;
 }
 
+.comp-back img {
+	animation-name: slide-in-fwd-top, fade;
+	animation-duration: 0.8s, 0.5s;
+	animation-delay: 0.3s, 0.3s;
+	animation-fill-mode: both, both;
+}
+
 .comp-home {
 	margin: 1vw 0.5vw 1vw 0.5vw;
 	width: 7vw;
@@ -287,6 +310,10 @@
 	font-size: 1.5rem;
 	font-weight: 500;
 	border-radius: 3px;
+	animation-name: slide-in-bottom;
+	animation-duration: 0.8s;
+	animation-delay: 0.8s;
+	animation-fill-mode: both;
 }
 
 .comp-home a {
@@ -302,6 +329,10 @@
 	border-radius: 2px;
 	font-weight: 500;
 	font-size: 1.2rem;
+	animation-name: scale-up-hor-center, fade;
+	animation-duration: 0.8s, 0.8s;
+	animation-delay: 0.8s, 0.8s;
+	animation-fill-mode: both, both;
 }
 
 .serial-number > span {
