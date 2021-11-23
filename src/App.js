@@ -19,9 +19,10 @@ function Nickname({onChange}) {
 
 function First() {
 
+
   return(
     <div className="main" style={{backgroundColor:"#f1f0f3"}}>
-      <video width="30%" autoPlay muted loop>
+      <video width="35%" autoPlay muted loop>
         <source src={homelogo} type='video/mp4' />
       </video>
       <Link className="start-btn" to="/nickname">시작하기</Link>
