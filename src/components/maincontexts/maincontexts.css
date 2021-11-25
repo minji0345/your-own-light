@@ -21,31 +21,7 @@
 		opacity: 1;
 	}
 }
-@keyframes slide-in-fwd-center {
-	0% {
-		-webkit-transform: translateZ(-1400px);
-		transform: translateZ(-1400px);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateZ(0);
-		transform: translateZ(0);
-		opacity: 1;
-	}
-}
-@keyframes focus-in-expand {
-	0% {
-		letter-spacing: -0.5em;
-		-webkit-filter: blur(12px);
-		filter: blur(12px);
-		opacity: 0;
-	}
-	100% {
-		-webkit-filter: blur(0);
-		filter: blur(0);
-		opacity: 1;
-	}
-}
+
 @keyframes focus-in-expand {
 	0% {
 		letter-spacing: -0.5em;
@@ -77,6 +53,19 @@
 	100% {
 		-webkit-transform: translateZ(0) translateY(0);
 		transform: translateZ(0) translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slide-in-bottom {
+	0% {
+		-webkit-transform: translateY(2000px);
+		transform: translateY(2000px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
 		opacity: 1;
 	}
 }
@@ -395,8 +384,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 5vw;
-	margin-bottom: 4vw;
+	margin-top: 2vw;
 	animation-name: focus-in-expand;
 	animation-duration: 0.5s;
 	animation-delay: 0s;
@@ -404,16 +392,20 @@
 }
 
 .home-text {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
+	position: relative;
 	margin: auto;
+	top:5vh;
 	width: 30vw;
 	font-size: 1rem;
 	text-align: center;
 	font-family: "Noto Sans KR", sans-serif;
+	animation-name: slide-in-bottom, fade;
+	animation-duration: 1s, 0.8s;
+	animation-delay: 1s, 1s;
+	animation-fill-mode: both, both;
+	display: flex;
+	justify-content: flex-end;
+	text-align: left;
 }
 
 .check-btns {
@@ -438,13 +430,17 @@
 }
 
 .motionlogo {
+	position:relative;
 }
 
-.motionlogo:hover {
-}
 
 .logoimg {
 	position: absolute;
+	z-index: 10;
+	animation-name: focus-in-expand;
+	animation-duration: 1s; 
+	animation-delay: 1s;
+	animation-fill-mode: both;
 }
 
 .checkout-main {
