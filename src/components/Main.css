@@ -18,7 +18,7 @@
 		transform: scaleX(1);
 	}
 }
-@-keyframes slide-in-fwd-center {
+@keyframes slide-in-fwd-center {
 	0% {
 		-webkit-transform: translateZ(-1400px);
 		transform: translateZ(-1400px);
@@ -102,6 +102,7 @@
 		opacity: 1;
 	}
 }
+@keyframes slide-in-left{0%{transform:translateY(-50px);opacity:1}50%{transform:translateY(0);opacity:1;}100%{transform:translateY(-50px);opacity:1}}
 
 .main {
 	width: 100vw;
@@ -251,27 +252,21 @@
 	background-color: #6a26ed;
 }
 
-
-/* .start-btn {
-	position: relative;
-	font-size: 1.1rem;
-	color: black;
-	text-decoration: none;
-	padding: 0.5vw 1vw 0.5vw 1vw;
-	animation-name: focus-in-expand, fade;
-	animation-duration: 1s, 1s;
-	animation-delay: 2s, 2s;
-	animation-fill-mode: both, both;
-	border-radius: 3px;
+.nick-vid{
+	width: 45vw;
 }
 
-.start-btn:hover {
-	background-color: white;
-	cursor: pointer;
-	transform: translateY(-3px);
-	transition: all ease 0.2s 0s;
-	box-shadow: 0px 5px 10px 1px rgb(106, 38, 237, 0.1);
-} */
+.start-text {
+	font-size: 1.5rem;
+	color: black;
+	position: relative;
+	top:-10vh;
+	animation-name:fade,scale-up-hor-center;
+    animation-duration: 1.2s, 1s;
+    animation-delay: 0.3s, 0.5s;
+    animation-fill-mode:both,both;
+}
+
 
 .complete-display {
 	width: 100vw;

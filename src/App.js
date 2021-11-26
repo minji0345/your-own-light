@@ -23,11 +23,14 @@ function First() {
 
 
   return(
-    <div className="main" style={{backgroundColor:"#f1f0f3"}}>
-        <video width="40%" autoPlay muted loop>
-          <source src={homelogo} type='video/mp4' />
-        </video>
-    </div>
+    <Link to="/nickname" >
+      <div className="main" style={{backgroundColor:"#f1f0f3"}}>
+            <video className="nick-vid" autoPlay muted loop>
+              <source src={homelogo} type='video/mp4' />
+            </video>
+            <div className="start-text">Click anywhere for start, let's make your own light.</div>
+      </div>
+    </Link>
   );
 }
 
