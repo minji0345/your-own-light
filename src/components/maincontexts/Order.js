@@ -81,7 +81,7 @@ function CityMiddle({name,info,color, cityHandler,city,handleBackOne,handleBackT
             </div>
             <div className="city-choose">
                 <div ></div>
-                <div className="choose-btn" onClick={() => clickHandler(name,color,city)}>choose</div>
+                <div className="choose-btn" onClick={() => clickHandler(name,color,city)}>Choose</div>
             </div>
         </div>
     )

@@ -212,8 +212,8 @@
 
 .list {
 	animation-name: slide-in-bottom, fade;
-	animation-duration: 0.8s, 0.5s;
-	animation-delay: 0.5s, 0.5s;
+	animation-duration: 0.8s, 0.8s;
+	animation-delay: 0.3s, 0.3s;
 	animation-fill-mode: both, both;
 }
 
@@ -351,7 +351,6 @@
 	text-align: center;
 	padding: 5px;
 	background-color: #ededef;
-	top: -0.8vw;
 	margin-right: 1vw;
 	font-size: 1.1rem;
 	font-weight: 500;
