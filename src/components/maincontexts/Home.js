@@ -18,7 +18,7 @@ function Home() {
     const pauseHandler = () => {
         vidRef.current.pause();
     }
-햐ㅅ
+    
     return (
         <div>
             <div className="main-home">
