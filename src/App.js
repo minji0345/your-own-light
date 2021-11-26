@@ -6,6 +6,8 @@ import { Routes, Route, Link } from "react-router-dom";
 import './components/Main.css';
 import homelogo from "./mp4/edit.mp4";
 
+import start from './components/maincontexts/assets/start.svg';
+
 
 function Nickname({onChange}) {
 
@@ -22,10 +24,9 @@ function First() {
 
   return(
     <div className="main" style={{backgroundColor:"#f1f0f3"}}>
-      <video width="35%" autoPlay muted loop>
-        <source src={homelogo} type='video/mp4' />
-      </video>
-      <Link className="start-btn" to="/nickname">시작하기</Link>
+        <video width="40%" autoPlay muted loop>
+          <source src={homelogo} type='video/mp4' />
+        </video>
     </div>
   );
 }

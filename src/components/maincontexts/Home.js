@@ -18,7 +18,7 @@ function Home() {
     const pauseHandler = () => {
         vidRef.current.pause();
     }
-    
+
     return (
         <div>
             <div className="main-home">
@@ -31,9 +31,9 @@ function Home() {
             </div>
             <div className="home-text"> 
                 <div className="text-para">
-                    오직 자신만의 빛을 ‘큐레이팅’하다.
-                    내가 조색한 나만의 조명은 공간을 재구성하며 그 안속에 색다른 빛을 불어넣는다.
-                    당신의 손에서 탄생한 조명은 새로운 경험을 만드는 특별한 분위기를 조성한다.
+                    오직 자신만의 빛을 ‘큐레이팅’합니다.
+                    내가 조색한 나만의 조명은 공간을 재구성하며 그 안속에 색다른 빛을 불어넣습니다.
+                    당신의 손에서 탄생한 조명은 새로운 경험을 만드는 특별한 분위기를 조성합니다.
                 </div>
                 <div className="text-para">
                     빛은 공간의 분위기를 바꾸는 데에 큰 역할을 합니다.
