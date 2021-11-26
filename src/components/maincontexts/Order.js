@@ -31,12 +31,12 @@ function CityTop({name,info,color,cityHandler,city,handleColor,handleBackOne,han
                     <img src={city} alt="seoul"/>
                 </div>
                 <div className="city-description">
-                        <div className="city-color" style={{backgroundColor: color }}>
+                        <div className="city-color" style={{backgroundColor:color}} >
 
                         </div>
                 </div>
             </div>
-            <div>
+            <div className="information">
                 city information
             </div>
             <div className="city-choose">
@@ -76,7 +76,7 @@ function CityMiddle({name,info,color, cityHandler,city,handleBackOne,handleBackT
                         </div>
                 </div>
             </div>
-            <div>
+            <div className="information">
                 city information
             </div>
             <div className="city-choose">
@@ -112,7 +112,7 @@ function CityBase({name,info,color,cityHandler,city,handleBackTwo}) {
                         </div>
                 </div>
             </div>
-            <div>
+            <div className="information">
                 city information
             </div>
             <div className="city-choose">
@@ -232,14 +232,14 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
                             <img src={nxt} alt='back'/>
                         </div> : <div className="next-button" onClick={nextHandler}> <img src={nxt} alt='back'/></div> }
                     </div>
-                    <div>{moduleHandler()}</div>
+                    <div className="list">{moduleHandler()}</div>
                 </div>
                 <div className="order-state">
                     <div className="progress">Your Progress</div>
                         <ChosenCity module={topModule} />
                         <ChosenCity module={middleModule}/>
                         <ChosenCity module={baseModule}/>
-                    { topModule.color && middleModule.color && baseModule.color !== '' ? <div className="checkout-btn" onClick={() => handleOrder(4)}  style={{ backgroundColor : "#6A26ED"}}>complete</div> : <div className="checkout-btn" style={{ backgroundColor : "#A6A6A7", color:"white"}}>complete</div> }
+                    { topModule.color && middleModule.color && baseModule.color !== '' ? <div className="checkout-btn" onClick={() => handleOrder(4)}  style={{ backgroundColor : "#6A26ED"}}>complete</div> : <div className="checkout-btn" style={{ backgroundColor : 'rgba(0,0,0,0.2)', color:"white"}}>complete</div> }
             </div>
     </div>
     );
