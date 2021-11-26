@@ -188,7 +188,7 @@ function Main({nickname}) {
         <div className="main" style={{ background: contentType === 4 ? 'white' : `linear-gradient(45deg,${backColor}, ${backColorOne},${backColorTwo})`}}>
             <div className="header">
                 <div className="nickname">
-                    <div className="first-btn"><Link to="/nickname"><img alt='first' src={first}/></Link> Hello,{nickname}! We hope you make amazing Light.</div>
+                    <div className="first-btn"><Link to="/nickname"><img alt='first' src={first}/></Link> Hello, {nickname}! We hope you make amazing Light.</div>
                 </div>
                 <div className="header-nav">
                     <div className="header-button" onClick={() => onHome()} style={{color: contentType === 1 ? "#6A26ED" : '#000000' }}>Home</div>
@@ -201,6 +201,7 @@ function Main({nickname}) {
                 {displayHandler()}
             </div>
         </div>
+        <div className="easter-egg" >Somthing hide</div>
     </>
     );
 }
