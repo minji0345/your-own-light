@@ -28,7 +28,7 @@ function First() {
             <video className="nick-vid" autoPlay muted loop>
               <source src={homelogo} type='video/mp4' />
             </video>
-            <div className="start-text">Click anywhere for start, let's make your own light.</div>
+            <div className="start-text">Click for start, let's make your own light.</div>
       </div>
     </Link>
   );
