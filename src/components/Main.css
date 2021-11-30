@@ -181,7 +181,7 @@
 
 .header-button:hover {
 	cursor: pointer;
-	background-color: white;
+	background: linear-gradient(white, transparent 90%);
 	-webkit-filter: blur(0px);
 	filter: blur(0px);
 
@@ -195,12 +195,13 @@
 }
 
 .logout:hover {
-	background-color: #6a26ed;
+	background: linear-gradient(#6a26ed,#8d56ff);
 }
 
 .logout a {
 	color: white;
 }
+
 
 .main-context {
 	width: 80vw;

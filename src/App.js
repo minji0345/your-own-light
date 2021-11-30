@@ -37,7 +37,7 @@ function First() {
 
 function App() {
 
-  const [nickname, setNickName] = useState('stranger');
+  const [nickname, setNickName] = useState('Stranger');
 
   const onChange = (e) => {
     setNickName(e.target.value)		//이벤트 발생한 value값으로 {text} 변경

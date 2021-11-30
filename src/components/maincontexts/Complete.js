@@ -5,7 +5,7 @@ import { Routes, Route, Link } from "react-router-dom";
 
 import text1 from './assets/text2.svg'
 
-function Complete() {
+function Complete({nickname}) {
 
     function randomNum(min, max){
         var randNum = Math.floor(Math.random()*(max-min+1)) + min;
@@ -20,7 +20,7 @@ function Complete() {
     return(
         <div className="main comp-back">
             <img src={text1} alt="text"  style={{}}/>
-            <div className="serial-number">The Serial Number of your Light is <span>{randomS}{serialNum}</span> Keep this number!</div>
+            <div className="serial-number">{nickname} ! The Serial Number of your Light is <span>{randomS}{serialNum}</span> Keep this number!</div>
             <Link to="/main" className="comp-home">Home</Link>
         </div>
     );
