@@ -291,7 +291,7 @@
 	padding: 2vw;
 	width: 15vw;
 	height: 6vw;
-	border-left: rgb(0, 0, 0, 0.5) solid 0.1px;
+	border-left: rgb(0, 0, 0, 0.5) solid 1px;
 	display: flex;
 	justify-content: center;
 }
@@ -622,7 +622,28 @@
 	text-align: center;
 }
 
+.about-title{
+	width: 60vw;
+	font-family: Noto Sans kr, sans-serif;
+	font-style: italic;
+	font-weight: 500;
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+}
+
 .about-img img{
 	position: relative;
 	width: 50vw;
+}
+
+
+.about-vid{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.about-vid video{
+	width: 30vw;
+	margin: 2vw;
 }
