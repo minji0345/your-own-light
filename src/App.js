@@ -6,7 +6,10 @@ import { Routes, Route, Link } from "react-router-dom";
 import './components/Main.css';
 import homelogo from "./mp4/edit.mp4";
 
-import start from './components/maincontexts/assets/start.svg';
+import detail from './components/maincontexts/abouts/app_detail.mp4';
+import over from './components/maincontexts/abouts/app_over.mp4';
+
+import pack from "./mp4/pack.png";
 
 
 function Nickname({onChange}) {
@@ -15,6 +18,29 @@ function Nickname({onChange}) {
     <div className="main nickname-back">
       <input className="nickname-input" placeholder="Enter Your Name!" onChange={onChange}></input>
       <Link className="nick-btn" to="/main">Submit</Link>
+    </div>
+  );
+}
+
+function Guide() {
+
+  return(
+    <div className="main nickname-back">
+      <div className="guide scroll" style={{overflowY:'scroll'}}>
+          <div className="guide-title">After ordering the lights from the website,</div>
+          
+          <div className="guide-text">STEP 1. You get the lights delivered home.</div>
+          <img src={pack} alt="logo" width="60%" className="pack"/>
+          <div className="guide-text">STEP 2. You get the lights delivered home.</div>
+          
+          <video muted loop autoPlay>
+            <source src={over} type='video/mp4' />
+          </video>
+          <video muted loop autoPlay>
+            <source src={detail} type='video/mp4' />
+          </video>
+      </div>
+      <Link className="nick-btn" to="/main">Home</Link>
     </div>
   );
 }
@@ -35,6 +61,7 @@ function First() {
 }
 
 
+
 function App() {
 
   const [nickname, setNickName] = useState('Stranger');
@@ -51,6 +78,7 @@ function App() {
         <Route exact path="/nickname" element={<Nickname onChange={onChange} nickname={nickname}/>} />
         <Route exact path="/main" element={<Main nickname={nickname}/>} />
         <Route exact path="/complete" element={<Complete nickname={nickname}/>} />
+        <Route exact path="/guide" element={<Guide/>} />
         <Route exact path="/about" element={<About/>} />
         <Route path="/" element={<First />} />
     </Routes>

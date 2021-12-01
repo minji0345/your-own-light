@@ -2,6 +2,9 @@ import React, { useRef, useState } from 'react';
 import motionlogo from "./imgs/grd.mp4";
 import logo from "./imgs/logoa.svg";
 import './maincontexts.css';
+import { Link } from "react-router-dom";
+
+import app from './imgs/app_1.mp4'
 
 
 function Home() {
@@ -40,6 +43,11 @@ function Home() {
                     당신의 손에서 탄생한 조명은 새로운 경험을 만드는 특별한 분위기를 조성합니다.
                 </div>
             </div>
+                <Link to="/guide">
+                    <video className="app-motion" width="40%" muted loop autoPlay > 
+                        <source src={app} type='video/mp4' />
+                    </video>
+                </Link>
         </div>
     );
 };
