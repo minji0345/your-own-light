@@ -5,7 +5,7 @@ import nxt from './assets/nxt.svg'
 
 
 
-const topCityinfo = ["대한민국의 수도이자 한강이 가로질러 흐르고 있는 서울은 21세기 문화를 이끄는 선두주자이다.한국의 고유한 문화유산과 현대적인 건축물들이 어우러져 있으며 곳곳에 즐길 거리가 즐비해있다.한국 고유문화 유산인 한옥과 갓 등에서 모티프를 가져와 디자인된 모듈이다.","영국의 수도이자 세계 최대 도시로 손꼽히는 곳. 영국의 정치, 경제, 문화, 교통의 중심지다.빅벤, 관람차, 템즈강 등 도시의 랜드마크들이 굉장히 많다. 과거와 현재가 공존하는 런던에서 모티프를 가져와 디자인된 모듈이다.","프랑스의 수도이자 패션과 미식, 예술과 낭만이 있는 세계 문화의 중심지이다. 파리는 그들의 고유한 문화를 소중하게 간직하는 곳으로 파리의 풍경은 예나 지금이나 늘 한결같다. 시간이 멈춘 아름다운 도시 파리에서 모티프를 가져와 디자인된 모듈이다.","아이슬란드의 수도인 레이캬비크는 북유럽에 위치해 멋진 풍경으로 최근 사람들이 많이 찾기 시작한 관광지이다. 인터스텔라, 왕좌의 게임 등 유명한 영화/드라마의 촬영지로 유명하다. 오로라를 보고자 많은 사람들이 레이캬비크를 찾고 있다. 빙하와 북유럽의 문화가 공존하는 레이캬비크에서 모티프를 가져와 디자인된 모듈이다." ];
+const topCityinfo = ["대한민국의 수도이자 한강이 가로질러 흐르고 있는 서울은 21세기 문화를 이끄는 선두주자이다.한국의 고유한 문화유산과 현대적인 건축물들이 어우러져 있으며 곳곳에 즐길 거리가 즐비해있다.한국 고유문화 유산인 한옥과 갓 등에서 모티프를 가져와 디자인된 모듈이다.","영국의 수도이자 세계 최대 도시로 손꼽히는 곳. 영국의 정치, 경제, 문화, 교통의 중심지다.빅벤, 관람차, 템즈강 등 도시의 랜드마크들이 굉장히 많다. 과거와 현재가 공존하는 런던에서 모티프를 가져와 디자인된 모듈이다.","프랑스의 수도이자 패션과 미식, 예술과 낭만이 있는 세계 문화의 중심지이다. 파리는 그들의 고유한 문화를 소중하게 간직하는 곳으로 파리의 풍경은 예나 지금이나 늘 한결같다. 시간이 멈춘 아름다운 도시 파리의 풍경에서 모티프를 가져와 디자인된 모듈이다.","아이슬란드의 수도인 레이캬비크는 북유럽에 위치해 멋진 풍경으로 최근 사람들이 많이 찾기 시작한 관광지이다. 영화와 드라마 등의 촬영지로 유명하다. 오로라를 보고자 많은 사람들이 레이캬비크를 찾고 있다. 빙하와 북유럽의 문화가 공존하는 레이캬비크에서 모티프를 가져와 디자인된 모듈이다." ];
 
 function CityTop({name,info,color,cityHandler,city,handleColor,handleBackOne,handleBackTwo,onSelect}) {
 
@@ -35,6 +35,7 @@ function CityTop({name,info,color,cityHandler,city,handleColor,handleBackOne,han
 
                         </div>
                 </div>
+                <div className="city-information">{info}</div>
                 <div className="choose-btn" onClick={() => clickHandler(name,color,city)}>Choose</div>
             </div>
         </div>
@@ -69,6 +70,7 @@ function CityMiddle({name,info,color, cityHandler,city,handleBackOne,handleBackT
 
                         </div>
                 </div>
+                <div className="city-information">{topCityinfo[0]}</div>
                 <div className="choose-btn" onClick={() => clickHandler(name,color,city)}>Choose</div>
             </div>
         </div>
@@ -99,6 +101,7 @@ function CityBase({name,info,color,cityHandler,city,handleBackTwo}) {
 
                         </div>
                 </div>
+                <div className="city-information">{topCityinfo[0]}</div>
                 <div className="choose-btn" onClick={() => clickHandler(name,color,city)}>Choose</div>
             </div>
         </div>
@@ -168,9 +171,9 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
         return(
             <div class="city-list scroll" style={{overflowY:'scroll'}}>
                 <CityTop name={"SEOUL"} info={topCityinfo[0]} color={colors[0]} cityHandler={(cityname,cityimg,citycolor)=> onTopModule(cityname,cityimg,citycolor)} city = {modules[0]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo} onSelect={onSelect}/>
-                <CityTop name={"LONDON"} info={"text"} color={colors[1]} cityHandler={(cityname,cityimg,citycolor)=> onTopModule(cityname,cityimg,citycolor)} city = {modules[1]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo} onSelect={onSelect}/>
-                <CityTop name={"PARIS"} info={"text"} color={colors[2]} cityHandler={(cityname,cityimg,citycolor)=> onTopModule(cityname,cityimg,citycolor)} city = {modules[2]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo} onSelect={onSelect}/>
-                <CityTop name={"REYKJAVIK"} info={"text"} color={colors[3]} cityHandler={(cityname,cityimg,citycolor)=> onTopModule(cityname,cityimg,citycolor)} city = {modules[3]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo} onSelect={onSelect}/>
+                <CityTop name={"LONDON"} info={topCityinfo[1]} color={colors[1]} cityHandler={(cityname,cityimg,citycolor)=> onTopModule(cityname,cityimg,citycolor)} city = {modules[1]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo} onSelect={onSelect}/>
+                <CityTop name={"PARIS"} info={topCityinfo[2]} color={colors[2]} cityHandler={(cityname,cityimg,citycolor)=> onTopModule(cityname,cityimg,citycolor)} city = {modules[2]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo} onSelect={onSelect}/>
+                <CityTop name={"REYKJAVIK"} info={topCityinfo[3]} color={colors[3]} cityHandler={(cityname,cityimg,citycolor)=> onTopModule(cityname,cityimg,citycolor)} city = {modules[3]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo} onSelect={onSelect}/>
             </div>
         )
     }

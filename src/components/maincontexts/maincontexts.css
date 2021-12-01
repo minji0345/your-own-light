@@ -300,6 +300,14 @@
 
 }
 
+.city-information{
+	width: 8vw;
+	font-size: 0.9rem;
+	position: relative;
+	right:0.4vw;
+	text-align: left;
+}
+
 .city-module {
 	width: 8.5vw;
 	height: 8.5vw;
@@ -317,7 +325,7 @@
 
 .city-description {
 	padding: 2vw;
-	width: 15vw;
+	width: 10vw;
 	height: 6vw;
 	border-left: rgb(0, 0, 0, 0.5) solid 1px;
 	display: flex;
