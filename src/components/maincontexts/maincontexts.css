@@ -677,7 +677,11 @@
 	font-weight: 500;
 	font-size: 2rem;
 	line-height: 3rem;
+	color: #6a26ed;
+	white-space:nowrap;
 }
+
+
 
 .about-sub{
 	width: 60vw;
@@ -700,13 +704,28 @@
 	display: flex;
 	flex-direction:column;
 	justify-content: center;
-	animation-name: slide-in-bottom, fade;
-	animation-duration: 1s, 0.3s;
-	animation-delay: 0.5s, 0.5s;
-	animation-fill-mode: both, both;	
 }
 
 .about-poster img{
 	width: 20vw;
 	margin: 2vw;	
+}
+
+.service-guide{
+	position: absolute;
+	position: absolute;
+	width: 8vw;
+	bottom:5vh;
+	left:-5vw;
+	text-align: center;
+	z-index: 20;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
+	font-weight: 600;
+	font-size: 1.3rem;
+	color: black;
+	animation-name: slide-in-left;
+	animation-duration: 1s;
+	animation-delay: 1.5s;
+	animation-fill-mode: both;
 }

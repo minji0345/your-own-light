@@ -433,7 +433,8 @@
 
 .pack{
 	animation-name: slide-in-top;
-	animation-duration: 0.8s;
+	animation-duration: 1s;
 	animation-delay: 0.5s;
 	animation-fill-mode: both;
 }
+

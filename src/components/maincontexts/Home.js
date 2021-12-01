@@ -43,7 +43,8 @@ function Home() {
                     당신의 손에서 탄생한 조명은 새로운 경험을 만드는 특별한 분위기를 조성합니다.
                 </div>
             </div>
-                <Link to="/guide">
+                <Link to="/guide" className="app-guide">
+                    <div className="service-guide">Service Guide</div>
                     <video className="app-motion" width="40%" muted loop autoPlay > 
                         <source src={app} type='video/mp4' />
                     </video>
