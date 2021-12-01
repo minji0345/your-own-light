@@ -689,6 +689,7 @@
 	line-height: 3rem;
 	color: #6a26ed;
 	white-space:nowrap;
+	margin-top: 3vw;
 }
 
 
@@ -738,4 +739,17 @@
 	animation-duration: 1s;
 	animation-delay: 1.5s;
 	animation-fill-mode: both;
+}
+
+.guide-para{
+	display: flex;
+	flex-direction: row;
+	width: 70vw;
+	justify-content: center;
+	align-items: center;
+	font-family: noto Sans kr;
+}
+
+.guide-text{
+	margin:2vw;
 }
