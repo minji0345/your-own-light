@@ -37,9 +37,11 @@ function Guide() {
             <img src={yol} alt="logo" width="50%"/>
             <div>어플을 다운받은 후 제공받은 입력번호를 입력하여 본인의 조명을 등록합니다. 조명의 별칭을 설정할 수 있습니다.</div>
           </div>
+          <div className="guide-text">STEP 3. You get the lights delivered home.</div>
           <video muted loop autoPlay>
             <source src={over} type='video/mp4' />
           </video>
+          <div className="guide-text">STEP 4. You get the lights delivered home.</div>
           <video muted loop autoPlay>
             <source src={detail} type='video/mp4' />
           </video>
