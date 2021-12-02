@@ -10,7 +10,7 @@ import detail from './components/maincontexts/abouts/app_detail.mp4';
 import over from './components/maincontexts/abouts/app_over.mp4';
 
 import pack from "./mp4/pack.png";
-import yol from "./mp4/yol.png";
+import yol from "./mp4/yol2.png";
 
 
 function Nickname({onChange}) {
