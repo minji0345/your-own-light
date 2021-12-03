@@ -186,14 +186,19 @@ function Main({nickname}) {
     return (
     <>
         <div className="main" style={{ background: contentType === 4 ? 'white' : `linear-gradient(45deg,${backColor}, ${backColorOne},${backColorTwo})`}}>
+        {   contentType === 3 &&
+            <>
+            <div  className="p5"><Sketch/></div>
+            <div  className="p5-backg"></div> </> }
+
             <div className="header">
                 <div className="nickname">
                     <div className="first-btn"><Link to="/nickname"><img alt='first' src={first}/></Link> Hello, {nickname}! We hope you make amazing Light.</div>
                 </div>
                 <div className="header-nav">
-                    <div className="header-button" onClick={() => onHome()} style={{color: contentType === 1 ? "#6A26ED" : '#000000', filter: contentType === 1 ? 'blur(0px)':'' }}>Home</div>
-                    <div className="header-button" onClick={() => onOrder()} style={{color: contentType === 2 ? "#6A26ED" : '#000000', filter: contentType === 2 ? 'blur(0px)':'' }}>Order</div>
-                    <div className="header-button" onClick={() => onAbout()} style={{color: contentType === 3 ? "#6A26ED" : '#000000',filter: contentType === 3 ? 'blur(0px)':'' }}>About</div>
+                    <div className="header-button" onClick={() => onHome()} style={{color: contentType === 1 ? "#6A26ED" : '#000000', filter: contentType === 1 ? 'blur(0px)':'' }}>HOEM</div>
+                    <div className="header-button" onClick={() => onOrder()} style={{color: contentType === 2 ? "#6A26ED" : '#000000', filter: contentType === 2 ? 'blur(0px)':'' }}>ORDER</div>
+                    <div className="header-button" onClick={() => onAbout()} style={{color: contentType === 3 ? "#6A26ED" : '#000000',filter: contentType === 3 ? 'blur(0px)':'' }}>ABOUT</div>
                     <div className="header-button logout"><Link style={{textDecoration:'none'}}to="/">LOGOUT</Link></div>
                 </div>
             </div>

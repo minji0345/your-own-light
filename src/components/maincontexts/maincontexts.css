@@ -304,6 +304,7 @@
 	position: relative;
 	margin-left: -1.5vw;
 	text-align: left;
+	line-height: 1.3rem;
 }
 
 .city-module {
@@ -394,18 +395,21 @@
 	font-size: 1.2rem;
 	font-weight: 500;
 	border-radius: 2px;
+	transition: all 0.3s ease-in-out;
 }
 
 .choose-btn:hover {
-	background: radial-gradient(#6a26ed, transparent 70%);
+	background: radial-gradient(#6a26ed ,rgba(255,255,255,1) 70%);
 	color: white;
 	height: 5vw;
+	/* border-radius: 5vw; */
 	line-height: 5vw;
 	cursor: pointer;
 	animation-name: fade;
 	animation-delay: 0.1;
 	animation-duration: 0.5s;
 	animation-fill-mode: both;
+	transition: all 0.3s ease-in-out;
 }
 
 .checkout-btn {
@@ -470,7 +474,7 @@
 	font-weight: 400;
 	animation-name: slide-in-bottom, fade;
 	animation-duration: 1s, 0.8s;
-	animation-delay: 1s, 1s;
+	animation-delay: 0.5s, 0.5s;
 	animation-fill-mode: both, both;
 	display: flex;
 	justify-content: center;
@@ -516,7 +520,7 @@
 	border-radius: 2vh;
 	animation-name: slide-in-left;
 	animation-duration: 1s;
-	animation-delay: 1.5s;
+	animation-delay: 1s;
 	animation-fill-mode: both;
 	z-index: 10;
 }
@@ -524,7 +528,7 @@
 .app-motion:hover {
 	cursor: pointer;
 	box-shadow: 0px 0px 30px 10px rgb(0, 0, 0, 0.2);
-	transition: all ease 0.2s 0s;
+	transition: all ease 0.3s 0s;
 }
 
 .logoimg {
@@ -692,6 +696,10 @@
 	color: #6a26ed;
 	white-space: nowrap;
 	margin-top: 3vw;
+	animation-name: focus-in-expand;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: both;
 }
 
 .about-text {
@@ -793,4 +801,25 @@
 
 .line{
 	border-top: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.react-p5{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top:0;
+}
+
+.p5-backg{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top:0;
+	left: 0;
+	top:0;
+	backdrop-filter: blur(20px) saturate(195%);
+	-webkit-backdrop-filter: blur(20px) saturate(195%);
+	background-color: rgba(241,240,243, 0.39);
 }
