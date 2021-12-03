@@ -20,7 +20,7 @@ function About() {
                         <br/>도시를 모티브로 디자인된 각 모듈을 탐색하며 마치 여행 코스를 짜듯이 당신만의 조명을 완성해 보세요."</div>
                     <div className="about-city">
                         <div className="about-sub">The list of spaces that reconstructed by the light.</div>
-                        <div className="about-text">
+                        <div className="about-text line">
                             <div className="about-para">
                                 공간을 이루는 요소를 다섯 가지 조형으로 정의 내렸다. 기둥, 계단, 문, 벽 그리고 조명. 각각의 공간은 브랜드에 기반이 되는 조명과 공간에 기반이 되는 벽을 제외한 기둥, 계단, 문이 특징적으로 반영돼 디자인된 공간이다. _기하은
                             </div>
@@ -28,13 +28,13 @@ function About() {
                             The elements that make up space are defined in five shapes. Pillars, stairs, doors, walls, and lighting. Each space is a space designed by characteristically reflecting pillars, stairs, and doors except for lighting based on the brand and walls based on the space. _Haeun Ki
                             </div>
                         </div>
-                        <div className="about-img">
+                        <div className="about-img img1">
                             <img src={spcseoul}   alt="logo"/>SEOUL
                         </div>
                         <div>문의 공간은 '서울'을 상징적으로 보여주는 스테인리스, 거울, 시멘트 그리고 회색조의 페인트로 이루어져 있다.</div>
-                        <div className="about-img"><img src={spcbali} alt="logo"/> ZAGREB</div>
+                        <div className="about-img img2"><img src={spcbali} alt="logo"/> ZAGREB</div>
                         <div>계단의 공간은 '자그레브'를 상징적으로 보여주는 돌, 붉은 톤의 벽으로 이루어져 있다.</div>
-                        <div className="about-img"><img src={spccro} alt="logo"/> BALI</div>
+                        <div className="about-img  img3"><img src={spccro} alt="logo"/> BALI</div>
                         <div>기둥의 공간은 '발리'를 상징적으로 보여주는 나무, 천 그리고 녹색의 유리로 이루어져 있다.</div>
                     </div>
                             <div className="about-poster">

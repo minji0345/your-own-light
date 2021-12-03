@@ -676,6 +676,10 @@
 	flex-direction: column;
 	text-align: center;
 	justify-content: center;
+	align-items: center;
+	width: 60vw;
+	margin-top: 3vw;
+	
 }
 
 .about-title {
@@ -701,7 +705,7 @@
 	flex-direction: row;
 	justify-content: center;
 	color: rgba(0, 0, 0, 0.7);
-	text-align: left;
+	padding: 2vw 0 2vw 0;
 }
 
 .about-sub{
@@ -741,16 +745,52 @@
 	position: relative;
 	width: 50vw;
 	border-radius: 10px;
+	margin-bottom: 2vw;
+
+}
+
+.img1 img{
+	background: linear-gradient(-90deg, rgba(122,90,255), rgba(31,117,255), rgba(255,232,64));
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+
+}
+
+.img1{
+	color:rgba(31,117,255);
+}
+
+.img2 img{
+	background: linear-gradient(-90deg,  rgba(245,67,255),rgba(255,146,92), rgba(200,34,255));
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+.img2{
+	color:rgba(245,67,255);
+}
+
+.img3 img{
+	background: linear-gradient(-90deg,  rgba(95,255,194),rgba(69,255,255), rgba(255,36,172));
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+.img3{
+	color:rgb(25, 238, 192);
 }
 
 .about-poster {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin: 2vw;
 }
 
 .about-poster img {
 	width: 20vw;
-	margin: 2vw;
 }
 
+.line{
+	border-top: 1px solid rgba(0, 0, 0, 0.7);
+}

@@ -1,29 +1,37 @@
-import React, { useState } from 'react';
-import './maincontexts.css';
-import '../Main.css'
+import React, { useState } from "react";
+import "./maincontexts.css";
+import "../Main.css";
 import { Routes, Route, Link } from "react-router-dom";
 
-import text1 from './assets/text2.svg'
+import text1 from "./assets/text2.svg";
 
-function Complete({nickname}) {
+function Complete({ nickname }) {
+  function randomNum(min, max) {
+    var randNum = Math.floor(Math.random() * (max - min + 1)) + min;
+    return randNum;
+  }
 
-    function randomNum(min, max){
-        var randNum = Math.floor(Math.random()*(max-min+1)) + min;
-        return randNum;
-    }
+  var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const randomS = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+  const serialNum = randomNum(1000, 9999);
 
-    const randomS = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-    const serialNum = randomNum(1000,9999);
-
-    return(
-        <div className="main comp-back">
-            <img src={text1} alt="text"  style={{}}/>
-            <div className="serial-number">{nickname} ! The Serial Number of your Light is <span>{randomS}{serialNum}</span> Keep this number!</div>
-            <Link to="/main" className="comp-home">Home</Link>
-        </div>
-    );
+  return (
+    <div className="main comp-back">
+      <img src={text1} alt="text" style={{}} />
+      <div className="serial-number">
+        {nickname} ! The Serial Number of your Light is{" "}
+        <span>
+          {randomS}
+          {serialNum}
+        </span>{" "}
+        Keep this number!
+      </div>
+      <Link to="/main" className="comp-home">
+        Home
+      </Link>
+    </div>
+  );
 }
 
 export default Complete;

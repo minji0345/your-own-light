@@ -201,7 +201,7 @@ function Main({nickname}) {
                 {displayHandler()}
             </div>
         </div>
-        <div className="easter-egg" >Somthing hide</div>
+        <Link to="/egg"><div className="easter-egg" >Somthing hide</div></Link>
     </>
     );
 }
