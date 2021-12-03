@@ -37,10 +37,10 @@ function About() {
                         <div className="about-img  img3"><img src={spccro} alt="logo"/> BALI</div>
                         <div>기둥의 공간은 '발리'를 상징적으로 보여주는 나무, 천 그리고 녹색의 유리로 이루어져 있다.</div>
                     </div>
-                            <div className="about-poster">
-                                {/* Y.O.L은 조명을 구매한 고객을 대상으로 심층 인터뷰를 실시하여 인터뷰를 바탕으로 고객의 방에 조명과 함께 인테리어 요소로 쓰일 수 있는 맞춤 포스터를 제작해 제공합니다. */}
+                            {/* <div className="about-poster">
+                                Y.O.L은 조명을 구매한 고객을 대상으로 심층 인터뷰를 실시하여 인터뷰를 바탕으로 고객의 방에 조명과 함께 인테리어 요소로 쓰일 수 있는 맞춤 포스터를 제작해 제공합니다.
                                 <img src={poster1} alt="logo" width="30%"/>
-                            </div>
+                            </div> */}
 
                 </div>
             </div>
