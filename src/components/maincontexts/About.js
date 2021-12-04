@@ -1,13 +1,12 @@
 import React from 'react';
-import Sketch from '../p5comps/Sketch';
 import './maincontexts.css';
 
-import spcseoul from './abouts/spc_seoul.gif';
-import spcbali from './abouts/spc_bali.gif';
-import spccro from './abouts/spc_cro.gif';
-import poster1 from './abouts/poster1.png';
-import poster2 from './abouts/poster2.png';
-import poster3 from './abouts/poster3.png';
+// import spcseoul from './abouts/spc_seoul.gif';
+// import spcbali from './abouts/spc_bali.gif';
+// import spccro from './abouts/spc_cro.gif';
+// import poster1 from './abouts/poster1.png';
+// import poster2 from './abouts/poster2.png';
+// import poster3 from './abouts/poster3.png';
 
 function About() {
 
@@ -30,13 +29,13 @@ function About() {
                                 Virtual comprises the space to the position the lighting of the brand.Defined as five formative elements to Form Space.Pillars, walls and doors, walls and lighting.Be based on each of the lighting that is brand based on space and space except for a column space that is reflected as a design features, staircases, doors. _Haeun Ki
                             </div>
                         </div>
-                        <div className="about-img img1">
+                        {/* <div className="about-img img1">
                             <img src={spcseoul}   alt="logo"/>SEOUL
-                        </div>
+                        </div> */}
                         <div>문의 공간은 '서울'을 상징적으로 보여주는 스테인리스, 거울, 시멘트 그리고 회색조의 페인트로 이루어져 있다.</div>
-                        <div className="about-img img2"><img src={spcbali} alt="logo"/> ZAGREB</div>
+                        {/* <div className="about-img img2"><img src={spcbali} alt="logo"/> ZAGREB</div> */}
                         <div>계단의 공간은 '자그레브'를 상징적으로 보여주는 돌, 붉은 톤의 벽으로 이루어져 있다.</div>
-                        <div className="about-img  img3"><img src={spccro} alt="logo"/> BALI</div>
+                        {/* <div className="about-img  img3"><img src={spccro} alt="logo"/> BALI</div> */}
                         <div>기둥의 공간은 '발리'를 상징적으로 보여주는 나무, 천 그리고 녹색의 유리로 이루어져 있다.</div>
                     </div>
 

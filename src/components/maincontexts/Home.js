@@ -1,36 +1,36 @@
 import React, { useRef, useState } from 'react';
-import motionlogo from "./imgs/grd.mp4";
+// import motionlogo from "./imgs/grd.mp4";
 import logo from "./imgs/logoa.svg";
 import './maincontexts.css';
 import { Link } from "react-router-dom";
 
-import app from './imgs/app_1.mp4'
+// import app from './imgs/app_1.mp4'
 
 
 function Home() {
 
-    const vidRef = useRef(motionlogo);
-    // const [isTrue, setIsTrue] = useState(false)
+    // const vidRef = useRef(motionlogo);
+    // // const [isTrue, setIsTrue] = useState(false)
 
 
-    const playHandler = () => {
-        vidRef.current.play();
-        // setIsTrue(true);
-    }
+    // const playHandler = () => {
+    //     vidRef.current.play();
+    //     // setIsTrue(true);
+    // }
 
-    const pauseHandler = () => {
-        vidRef.current.pause();
-    }
+    // const pauseHandler = () => {
+    //     vidRef.current.pause();
+    // }
 
     return (
         <div>
             <div className="main-home">
-                <img src={logo} alt="logo" width="20%" className="logoimg"/>
+                {/* <img src={logo} alt="logo" width="20%" className="logoimg"/>
                 <video className="motionlogo" width="40%" muted loop autoPlay 
                 // ref={vidRef} onMouseEnter={playHandler} onMouseLeave={pauseHandler}
                 >
                     <source src={motionlogo} type='video/mp4' />
-                </video>
+                </video> */}
             </div>
             <div className="home-text"> 
                 <div className="text-para">
@@ -45,9 +45,9 @@ function Home() {
             </div>
                 <Link to="/guide" className="app-guide">
                     <div className="service-guide">Service Guide</div>
-                    <video className="app-motion" width="40%" muted loop autoPlay > 
+                    {/* <video className="app-motion" width="40%" muted loop autoPlay > 
                         <source src={app} type='video/mp4' />
-                    </video>
+                    </video> */}
                 </Link>
         </div>
     );
