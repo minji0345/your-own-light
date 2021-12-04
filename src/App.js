@@ -96,7 +96,7 @@ function First() {
   return(
     <Link to="/nickname" >
       <div className="main" style={{backgroundColor:"#f1f0f3"}}>
-            <video className="nick-vid" autoPlay muted loop>
+      <video className="nick-vid" autoPlay muted loop>
               <source src={homelogo} type='video/mp4' />
             </video>
             <div className="start-text">Click for start, let's make your own light.</div>
