@@ -99,6 +99,7 @@ function First() {
             {/* <video className="nick-vid" autoPlay muted loop>
               <source src={homelogo} type='video/mp4' />
             </video> */}
+            {/* <iframe src="https://vimeo.com/653187347/b9cc2a933c" width="800" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Intro Poster (Desktop)" data-ready="true"></iframe> */}
             <div className="start-text">Click for start, let's make your own light.</div>
       </div>
     </Link>
