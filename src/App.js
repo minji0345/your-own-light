@@ -4,14 +4,14 @@ import Complete from './components/maincontexts/Complete';
 import About from './components/maincontexts/About';
 import { Routes, Route, Link } from "react-router-dom";
 import './components/Main.css';
-import homelogo from "./mp4/edit.mp4";
+// import homelogo from "./mp4/edit.mp4";
 
-import detail from './components/maincontexts/abouts/app_detail.mp4';
-import over from './components/maincontexts/abouts/app_over.mp4';
+// import detail from './components/maincontexts/abouts/app_detail.mp4';
+// import over from './components/maincontexts/abouts/app_over.mp4';
 
 import pack from "./mp4/pack.png";
 import yol from "./mp4/yol2.png";
-import egg from "./mp4/egg_back.mp4";
+// import egg from "./mp4/egg_back.mp4";
 
 
 function Nickname({onChange}) {
@@ -39,12 +39,12 @@ function Guide() {
             <div>어플을 다운받은 후 제공받은 입력번호를 입력하여 본인의 조명을 등록합니다.<br/> 조명의 별칭을 설정할 수 있습니다.</div>
           </div>
           <div className="guide-text">STEP 3. You can manipulate the lighting as you want.</div>
-            {/* <video muted loop autoPlay>
-              <source src={over} type='video/mp4' />
-            </video>
-            <video muted loop autoPlay>
-              <source src={detail} type='video/mp4' />
-            </video> */}
+          {/* <video muted loop autoPlay>
+            <source src={over} type='video/mp4' />
+          </video>
+          <video muted loop autoPlay>
+            <source src={detail} type='video/mp4' />
+          </video> */}
       </div>
       <Link className="nick-btn" to="/main">Home</Link>
     </div>
