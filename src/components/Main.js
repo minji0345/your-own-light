@@ -196,7 +196,7 @@ function Main({nickname}) {
                     <div className="first-btn"><Link to="/nickname"><img alt='first' src={first}/></Link> Hello, {nickname}! We hope you make amazing Light.</div>
                 </div>
                 <div className="header-nav">
-                    <div className="header-button" onClick={() => onHome()} style={{color: contentType === 1 ? "#6A26ED" : '#000000', filter: contentType === 1 ? 'blur(0px)':'' }}>HOEM</div>
+                    <div className="header-button" onClick={() => onHome()} style={{color: contentType === 1 ? "#6A26ED" : '#000000', filter: contentType === 1 ? 'blur(0px)':'' }}>HOME</div>
                     <div className="header-button" onClick={() => onOrder()} style={{color: contentType === 2 ? "#6A26ED" : '#000000', filter: contentType === 2 ? 'blur(0px)':'' }}>ORDER</div>
                     <div className="header-button" onClick={() => onAbout()} style={{color: contentType === 3 ? "#6A26ED" : '#000000',filter: contentType === 3 ? 'blur(0px)':'' }}>ABOUT</div>
                     <div className="header-button logout"><Link style={{textDecoration:'none'}}to="/">LOGOUT</Link></div>
@@ -206,7 +206,7 @@ function Main({nickname}) {
                 {displayHandler()}
             </div>
         </div>
-        <Link to="/egg"><div className="easter-egg" >Somthing hide</div></Link>
+        <Link to="/egg"><div className="easter-egg" >Something hide</div></Link>
     </>
     );
 }
