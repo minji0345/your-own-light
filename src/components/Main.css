@@ -185,37 +185,44 @@
 	justify-content: flex-end;
 	font-weight: 500;
 	font-size: 1.4rem;
+	letter-spacing: 0.5px;
 }
 
 .header-button {
-	width: 5vw;
+	width: 3.5vw;
 	align-items: center;
 	text-align: center;
 	padding: 0.5vw 1vw 0.5vw 1vw;
-	margin: 0 0.5vw 0 0.5vw;
-	border-radius: 3px;
+	margin: 0 1.2vw 0 1.2vw;
+	border-radius: 200px 200px 3px 3px;
 	padding: 0.5vw 1vw 0.5vw 1vw;
 	-webkit-filter: blur(2px);
 	filter: blur(2px);
+	transition: all 0.3s ease-in-out;
 }
 
 .header-button:hover {
 	cursor: pointer;
-	background: linear-gradient(white, transparent 90%);
+	background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
 	-webkit-filter: blur(0px);
 	filter: blur(0px);
-
+	letter-spacing: 0.2px;
+	transition: all 0.3s ease-in-out;
 }
 
 .logout {
+	width: 4.5vw;
+	border-radius: 3px;
 	background-color: black;
 	padding: 0.5vw 1vw 0.5vw 1vw;
 	-webkit-filter: blur(0px);
 	filter: blur(0px);
+	transition: all 0.3s ease-in-out;
 }
 
 .logout:hover {
 	background: linear-gradient(#6a26ed,#8d56ff);
+	transition: all 0.3s ease-in-out;
 }
 
 .logout a {
@@ -431,6 +438,10 @@
 	margin: 1vh;
 }
 
+.guide-para img{
+	margin-right: 2vw;
+}
+
 .pack{
 	animation-name: slide-in-top;
 	animation-duration: 1s;
@@ -453,7 +464,7 @@
 	color: black;
 	animation-name: slide-in-left;
 	animation-duration: 1s;
-	animation-delay: 1.5s;
+	animation-delay: 1s;
 	animation-fill-mode: both;
 }
 
