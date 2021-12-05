@@ -96,8 +96,8 @@ function First() {
   return(
     <Link to="/nickname" >
       <div className="main" style={{backgroundColor:"#f1f0f3"}}>
-        <div>
-          <iframe src="https://player.vimeo.com/video/653187347?autoplay=1&loop=1&autopause=0&muted=1&controls=0" width="1000" height="1000" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="edit.mp4"></iframe>
+        <div className="vimeo-vid">
+          <iframe src="https://player.vimeo.com/video/653187347?autoplay=1&loop=1&autopause=0&muted=1&controls=0" width="1000" height="1000" frameborder="0" allow="autoplay; fullscreen;" allowfullscreen title="edit.mp4"></iframe>
         </div>
             {/* <video className="nick-vid" autoPlay muted loop>
               <source src={homelogo} type='video/mp4' />

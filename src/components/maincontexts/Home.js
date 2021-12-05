@@ -13,14 +13,14 @@ function Home() {
     // const [isTrue, setIsTrue] = useState(false)
 
 
-    const playHandler = () => {
-        vidRef.current.play();
-        // setIsTrue(true);
-    }
+    // const playHandler = () => {
+    //     vidRef.current.play();
+    //     // setIsTrue(true);
+    // }
 
-    const pauseHandler = () => {
-        vidRef.current.pause();
-    }
+    // const pauseHandler = () => {
+    //     vidRef.current.pause();
+    // }
 
     return (
         <div>
