@@ -96,12 +96,12 @@ function First() {
   return(
     <Link to="/nickname" >
       <div className="main" style={{backgroundColor:"#f1f0f3"}}>
-        <div>
+        {/* <div>
           <iframe src="https://player.vimeo.com/video/653187347?autoplay=1&loop=1&autopause=0&muted=1&controls=0" width="1000" height="1000" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="edit.mp4"></iframe>
-        </div>
-            {/* <video className="nick-vid" autoPlay muted loop>
+        </div> */}
+            <video className="nick-vid" autoPlay muted loop>
               <source src={homelogo} type='video/mp4' />
-            </video> */}
+            </video>
             <div className="start-text">Click for start, let's make your own light.</div>
       </div>
     </Link>
