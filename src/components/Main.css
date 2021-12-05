@@ -291,6 +291,10 @@
 	width: 45vw;
 }
 
+.vp-controls{
+	display: none;
+}
+
 .start-text {
 	font-size: 1.5rem;
 	color: black;
