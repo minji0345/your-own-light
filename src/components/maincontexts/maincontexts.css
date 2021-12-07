@@ -299,12 +299,12 @@
 
 .city-information {
 	min-width: 200px;
-	width: 8vw;
+	width: 11vw;
 	font-size: 0.9rem;
 	position: relative;
 	margin-left: -1.5vw;
 	text-align: left;
-	line-height: 1.3rem;
+	line-height: 1.7rem;
 }
 
 .city-module {
