@@ -169,10 +169,13 @@
 	font-family: "urbanist";
 	font-weight: 600;
 	font-size: 1.2rem;
+	padding: 0.5vw 1vw 0.5vw 1vw;
+	border-radius: 0.3vw;
 }
 
 .status:hover {
 	cursor: pointer;
+	background-color: rgba(255,255,255,0.5);
 }
 
 .prev-button {
