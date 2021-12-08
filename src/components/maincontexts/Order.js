@@ -177,7 +177,7 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
     function CityBlockTop() {
         return(
             <div class="city-list scroll" style={{overflowY:'scroll'}}>
-                <div className="city-block"><img src={topgif} alt="topgif"/></div>
+                <div className="gif-block"><img src={topgif} alt="topgif"/><div className="gif-text">TOP에 해당하는 모듈을 선택합니다.아래에서 모듈을 탐색한 뒤, 선택 해보세요.</div></div>
                 <CityTop name={"SEOUL"} info={topCityinfo[0]} color={colors[0]} cityHandler={(cityname,cityimg,citycolor)=> onTopModule(cityname,cityimg,citycolor)} city = {modules[0]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo} onSelect={onSelect}/>
                 <CityTop name={"LONDON"} info={topCityinfo[1]} color={colors[1]} cityHandler={(cityname,cityimg,citycolor)=> onTopModule(cityname,cityimg,citycolor)} city = {modules[1]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo} onSelect={onSelect}/>
                 <CityTop name={"PARIS"} info={topCityinfo[2]} color={colors[2]} cityHandler={(cityname,cityimg,citycolor)=> onTopModule(cityname,cityimg,citycolor)} city = {modules[2]} handleColor = {handleColor} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo} onSelect={onSelect}/>
@@ -189,7 +189,7 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
     function CityBlockMiddle() {
         return(
             <div class="city-list scroll" style={{overflowY:'scroll'}}>
-                <div className="city-block"><img src={middlegif} alt="topgif"/></div>
+                <div className="gif-block"><img src={middlegif} alt="topgif"/><div className="gif-text">MIDDLE에 해당하는 모듈을 선택합니다.아래에서 모듈을 탐색한 뒤, 선택 해보세요.</div></div>
                 <CityMiddle name={"ZAGREB"} info={middleCityinfo[0]} color={colors[4]} cityHandler={(cityname,cityimg,citycolor)=> onMiddleModule(cityname,cityimg,citycolor)}  city = {modules[4]} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo} onSelect={onSelect}/>
                 <CityMiddle name={"BAGAN"} info={middleCityinfo[1]} color={colors[5]} cityHandler={(cityname,cityimg,citycolor)=> onMiddleModule(cityname,cityimg,citycolor)}  city = {modules[6]} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo} onSelect={onSelect}/>
                 <CityMiddle name={"SINGAPORE"} info={middleCityinfo[2]} color={colors[6]} cityHandler={(cityname,cityimg,citycolor)=> onMiddleModule(cityname,cityimg,citycolor)}  city = {modules[5]} handleBackOne={handleBackOne} handleBackTwo={handleBackTwo} onSelect={onSelect}/>
@@ -200,7 +200,7 @@ function Order({topModule,middleModule,baseModule,onTopModule,onMiddleModule,onB
     function CityBlockBase() {
         return(
             <div class="city-list scroll" style={{overflowY:'scroll'}}>
-                <div className="city-block"><img src={basegif} alt="topgif"/></div>
+                <div className="gif-block"><img src={basegif} alt="topgif"/><div className="gif-text">BASE에 해당하는 모듈을 선택합니다.아래에서 모듈을 탐색한 뒤, 선택 해보세요.</div></div>
                 <CityBase name={"EL CALAFATE"} info={baseCityinfo[0]} color={colors[6]} cityHandler={(cityname,cityimg,citycolor)=> onBaseModule (cityname,cityimg,citycolor)} city = {modules[7]} handleBackTwo={handleBackTwo}/>
                 <CityBase name={"SANTIAGO"} info={baseCityinfo[1]} color={colors[7]} cityHandler={(cityname,cityimg,citycolor)=> onBaseModule (cityname,cityimg,citycolor)}  city = {modules[8]} handleBackTwo={handleBackTwo}/>
                 <CityBase name={"BALI"} info={baseCityinfo[2]} color={colors[8]} cityHandler={(cityname,cityimg,citycolor)=> onBaseModule (cityname,cityimg,citycolor)} city = {modules[9]} handleBackTwo={handleBackTwo}/>
