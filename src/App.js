@@ -39,12 +39,14 @@ function Guide() {
             <div>어플을 다운받은 후 제공받은 입력번호를 입력하여 본인의 조명을 등록합니다.<br/> 조명의 별칭을 설정할 수 있습니다.</div>
           </div>
           <div className="guide-text">STEP 3. You can manipulate the lighting as you want.</div>
-          <video muted loop autoPlay>
-            <source src={over} type='video/mp4' />
-          </video>
-          <video muted loop autoPlay>
-            <source src={detail} type='video/mp4' />
-          </video>
+    
+          <div className="vimeo-vid">
+            <iframe src="https://player.vimeo.com/video/658644091?autoplay=1&loop=1&autopause=0&muted=1&controls=0" width="1100" height="800" frameborder="0" allow="autoplay; fullscreen;" allowfullscreen title="edit.mp4"></iframe>
+          </div>
+
+          <div className="vimeo-vid">
+            <iframe src="https://player.vimeo.com/video/658643217?autoplay=1&loop=1&autopause=0&muted=1&controls=0" width="1100" height="800" frameborder="0" allow="autoplay; fullscreen;" allowfullscreen title="edit.mp4"></iframe>
+          </div>
       </div>
       <Link className="nick-btn" to="/main">Home</Link>
     </div>
@@ -55,9 +57,12 @@ function Egg() {
 
   return(
     <>
-    <video muted loop autoPlay className="egg-back">
+    {/* <video muted loop autoPlay className="egg-back">
             <source src={egg} type='video/mp4' />
-          </video>
+          </video> */}
+          <div className="vimeo-vid egg-back">
+          <iframe src="https://player.vimeo.com/video/653183403?autoplay=1&loop=1&autopause=0&muted=1&controls=0" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen;" allowfullscreen title="edit.mp4"></iframe>
+        </div>
     <div className="egg-back">
       <div className="egg scroll" style={{overflowY:'scroll'}}>
           <div className="egg-title">
@@ -99,10 +104,6 @@ function First() {
         <div className="vimeo-vid">
           <iframe src="https://player.vimeo.com/video/653187347?autoplay=1&loop=1&autopause=0&muted=1&controls=0" width="1000" height="1000" frameborder="0" allow="autoplay; fullscreen;" allowfullscreen title="edit.mp4"></iframe>
         </div>
-            {/* <video className="nick-vid" autoPlay muted loop>
-              <source src={homelogo} type='video/mp4' />
-            </video> */}
-            <div className="start-text">Click for start, let's make your own light.</div>
       </div>
     </Link>
   );

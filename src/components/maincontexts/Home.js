@@ -26,11 +26,14 @@ function Home() {
         <div>
             <div className="main-home">
                 <img src={logo} alt="logo" width="20%" className="logoimg"/>
-                <video className="motionlogo" width="40%" muted loop autoPlay 
+                {/* <video className="motionlogo" width="40%" muted loop autoPlay 
                 // ref={vidRef} onMouseEnter={playHandler} onMouseLeave={pauseHandler}
                 >
                     <source src={motionlogo} type='video/mp4' />
-                </video>
+                </video> */}
+                <div className="vimeo-vid motionlogo">
+          <iframe src="https://player.vimeo.com/video/653185128?autoplay=1&loop=1&autopause=0&muted=1&controls=0" width="1000" height="800" frameborder="0" allow="autoplay; fullscreen;" allowfullscreen title="edit.mp4"></iframe>
+        </div>
             </div>
             <div className="home-text"> 
                 <div className="text-para">
@@ -44,10 +47,13 @@ function Home() {
                 </div>
             </div>
                 <Link to="/guide" className="app-guide">
-                    <div className="service-guide">Service Guide</div>
-                    <video className="app-motion" width="40%" muted loop autoPlay > 
+                    <div className="service-guide">Service Guide, Click!</div>
+                    {/* <video className="app-motion" width="40%" muted loop autoPlay > 
                         <source src={app} type='video/mp4' />
-                    </video>
+                    </video> */}
+                    <div className="vimeo-vid app-motion">
+                        <iframe src="https://player.vimeo.com/video/653185108?autoplay=1&loop=1&autopause=0&muted=1&controls=0" width="200" height="420" frameborder="0" allow="autoplay; fullscreen;" allowfullscreen title="edit.mp4"></iframe>
+                    </div>
                 </Link>
         </div>
     );

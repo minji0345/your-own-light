@@ -16,8 +16,8 @@ import paris from "./maincontexts/module/paris.png";
 import rey from "./maincontexts/module/rey.png";
 
 import zag from "./maincontexts/module/zagreb.png";
-import nay from "./maincontexts/module/nay.png";
 import singapore from "./maincontexts/module/singapore.png";
+import bagan from "./maincontexts/module/bagan.png";
 
 import el from "./maincontexts/module/el.png";
 import santiago from "./maincontexts/module/santiago.png";
@@ -32,7 +32,7 @@ function Main({nickname}) {
     "rgba(246,157,92,1)","rgba(252,107,93,1)","rgba(90,193,116,1)","rgba(241,149,194,1)"]
 
     const modules = [
-        seoul,london,paris,rey,zag,nay,singapore,el,santiago,bali
+        seoul,london,paris,rey,zag,singapore,bagan,el,santiago,bali
     ]
 
     const [contentType, setContentType] = useState(1)
