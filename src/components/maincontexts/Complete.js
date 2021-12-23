@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./maincontexts.css";
 import "../Main.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import text1 from "./assets/text2.svg";
 

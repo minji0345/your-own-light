@@ -1,13 +1,13 @@
 import React from 'react';
-import Sketch from '../p5comps/Sketch';
+// import Sketch from '../p5comps/Sketch';
 import './maincontexts.css';
 
 import spcseoul from './abouts/spc_seoul.gif';
 import spcbali from './abouts/spc_bali.gif';
 import spccro from './abouts/spc_cro.gif';
-import poster1 from './abouts/poster1.png';
-import poster2 from './abouts/poster2.png';
-import poster3 from './abouts/poster3.png';
+// import poster1 from './abouts/poster1.png';
+// import poster2 from './abouts/poster2.png';
+// import poster3 from './abouts/poster3.png';
 
 function About() {
 
