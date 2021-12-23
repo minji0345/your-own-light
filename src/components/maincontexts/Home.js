@@ -1,15 +1,13 @@
-import React, { useRef, useState } from 'react';
-import motionlogo from "./imgs/grd.mp4";
+import React from 'react';
 import logo from "./imgs/logoa.svg";
 import './maincontexts.css';
 import { Link } from "react-router-dom";
 
-import app from './imgs/app_1.mp4'
+// import app from './imgs/app_1.mp4'
 
 
 function Home() {
 
-    const vidRef = useRef(motionlogo);
     // const [isTrue, setIsTrue] = useState(false)
 
 

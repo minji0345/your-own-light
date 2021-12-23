@@ -4,14 +4,14 @@ import Complete from './components/maincontexts/Complete';
 import About from './components/maincontexts/About';
 import { Routes, Route, Link } from "react-router-dom";
 import './components/Main.css';
-import homelogo from "./mp4/edit.mp4";
+// import homelogo from "./mp4/edit.mp4";
 
-import detail from './components/maincontexts/abouts/app_detail.mp4';
-import over from './components/maincontexts/abouts/app_over.mp4';
+// import detail from './components/maincontexts/abouts/app_detail.mp4';
+// import over from './components/maincontexts/abouts/app_over.mp4';
 
 import pack from "./mp4/pack.png";
 import yol from "./mp4/yol2.png";
-import egg from "./mp4/egg_back.mp4";
+// import egg from "./mp4/egg_back.mp4";
 
 
 function Nickname({onChange}) {
@@ -104,6 +104,7 @@ function First() {
         <div className="vimeo-vid">
           <iframe src="https://player.vimeo.com/video/653187347?autoplay=1&loop=1&autopause=0&muted=1&controls=0" width="1000" height="1000" frameborder="0" allow="autoplay; fullscreen;" allowfullscreen title="edit.mp4"></iframe>
         </div>
+        <div className="start-text">Click for start, let's make your own light.</div>
       </div>
     </Link>
   );

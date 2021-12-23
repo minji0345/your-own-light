@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './Main.css';
 import About from './maincontexts/About';
 import Home from './maincontexts/Home';
