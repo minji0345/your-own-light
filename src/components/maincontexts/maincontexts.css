@@ -170,7 +170,7 @@
 	font-weight: 600;
 	font-size: 1.2rem;
 	padding: 0.5vw 1vw 0.5vw 1vw;
-	border-radius: 0.3vw;
+	border-radius: 3px;
 }
 
 .status:hover {
